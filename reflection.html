@@ -1,0 +1,983 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflection | Professional Skills Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* REFLECTION PAGE */
+
+.reflection-page {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 55px 0 80px;
+}
+
+/* HERO */
+
+.reflection-hero {
+    min-height: 430px;
+    background: #4b3427;
+    border-radius: 15px;
+    padding: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 65px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+}
+
+.hero-eyebrow {
+    color: #c9dfed;
+    font-size: 11px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.reflection-hero h1 {
+    font-family: "Playfair Display", serif;
+    color: #fffdf9;
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.reflection-hero h1 span {
+    color: #f6e5aa;
+    font-style: italic;
+}
+
+.hero-description {
+    color: #eee8df;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 520px;
+}
+
+.hero-note {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 30px;
+    color: #fffdf9;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.hero-art {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    min-width: 260px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-art::before {
+    content: "";
+    position: absolute;
+    width: 195px;
+    height: 195px;
+    border: 1px solid #f6e5aa;
+    border-radius: 50%;
+}
+
+.hero-art::after {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: #c9dfed;
+    border-radius: 50%;
+    opacity: .85;
+}
+
+.hero-art span {
+    position: relative;
+    z-index: 2;
+    font-family: "Playfair Display", serif;
+    font-size: 90px;
+    color: #4b3427;
+}
+
+/* INTRODUCTION */
+
+.reflection-intro {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 45px;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.intro-label {
+    color: #567a9c;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.intro-title {
+    font-family: "Playfair Display", serif;
+    font-size: 43px;
+    line-height: 1.2;
+    color: #4b3427;
+    margin-top: 12px;
+}
+
+.intro-title span {
+    color: #567a9c;
+    font-style: italic;
+}
+
+.intro-text {
+    border-left: 3px solid #f1e2a9;
+    padding: 10px 0 10px 25px;
+}
+
+.intro-text p {
+    color: #625a52;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* SECTION HEADINGS */
+
+.reflection-section {
+    margin-bottom: 75px;
+}
+
+.reflection-section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.reflection-section-heading small,
+.journey-heading small {
+    color: #567a9c;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.reflection-section-heading h2,
+.journey-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    color: #4b3427;
+    margin: 10px 0;
+}
+
+.reflection-section-heading p {
+    color: #756d65;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* REFLECTION CARDS */
+
+.reflection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.reflection-card {
+    min-height: 255px;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .3s ease;
+}
+
+.reflection-card:hover {
+    transform: translateY(-5px);
+}
+
+.reflection-card:nth-child(1) { background: #f6e5aa; }
+.reflection-card:nth-child(2) { background: #c9dfed; }
+.reflection-card:nth-child(3) { background: #f4d9dc; }
+.reflection-card:nth-child(4) { background: #eee8df; }
+.reflection-card:nth-child(5) { background: #dce8df; }
+.reflection-card:nth-child(6) { background: #e5def0; }
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-number {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #4b3427;
+}
+
+.card-symbol {
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(75,52,39,.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.reflection-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    color: #4b3427;
+    margin: 25px 0 10px;
+}
+
+.reflection-card p {
+    color: #625a52;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* JOURNEY TIMELINE */
+
+.journey-section {
+    background: #eee8df;
+    border-radius: 14px;
+    padding: 45px;
+    margin-bottom: 75px;
+}
+
+.journey-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.journey-heading h2 {
+    margin-top: 10px;
+}
+
+.journey-list {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.journey-list::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 12px;
+    bottom: 12px;
+    width: 1px;
+    background: #b8a99a;
+}
+
+.journey-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 20px;
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.journey-item:last-child {
+    margin-bottom: 0;
+}
+
+.journey-dot {
+    width: 35px;
+    height: 35px;
+    background: #f6e5aa;
+    border: 1px solid #a99d8d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    color: #4b3427;
+    font-size: 13px;
+}
+
+.journey-item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    color: #4b3427;
+    margin-bottom: 5px;
+}
+
+.journey-item p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #756d65;
+}
+
+/* BEFORE AND NOW */
+
+.growth-section {
+    margin-bottom: 75px;
+}
+
+.growth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.growth-card {
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.growth-card.before { background: #f4d9dc; }
+.growth-card.after { background: #c9dfed; }
+
+.growth-card small {
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #567a9c;
+}
+
+.growth-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #4b3427;
+    margin: 12px 0 18px;
+}
+
+.growth-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.growth-card li {
+    font-size: 13px;
+    color: #514940;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(75,52,39,.15);
+    line-height: 1.7;
+}
+
+.growth-card li:last-child {
+    border-bottom: none;
+}
+
+/* BIGGEST LESSONS */
+
+.lessons-learned {
+    background: #f6e5aa;
+    padding: 40px;
+    border-radius: 14px;
+    margin-bottom: 75px;
+}
+
+.lessons-learned h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    color: #4b3427;
+    margin: 10px 0 25px;
+}
+
+.lesson-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.lesson-point {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    background: rgba(255,255,255,.45);
+    border-radius: 9px;
+    padding: 17px;
+}
+
+.lesson-point span {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    color: #567a9c;
+}
+
+.lesson-point p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #514940;
+}
+
+/* FINAL REFLECTION */
+
+.final-reflection {
+    background: #4b3427;
+    padding: 55px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.final-reflection .final-label {
+    color: #c9dfed;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.final-reflection h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 42px;
+    color: #fffdf9;
+    margin: 15px 0 20px;
+}
+
+.final-reflection p {
+    color: #eee8df;
+    font-size: 13px;
+    line-height: 2;
+    max-width: 760px;
+    margin: auto;
+}
+
+.final-quote {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 25px;
+    color: #f6e5aa;
+    margin-top: 30px;
+}
+
+/* SIGN OFF */
+
+.reflection-signoff {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.reflection-signoff p {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #567a9c;
+    font-weight: 700;
+}
+
+.reflection-signoff h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: #4b3427;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .reflection-hero { padding: 45px; }
+
+    .hero-art {
+        width: 190px;
+        height: 190px;
+        min-width: 190px;
+    }
+
+    .hero-art::before {
+        width: 145px;
+        height: 145px;
+    }
+
+    .hero-art::after {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-art span { font-size: 65px; }
+
+    .reflection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .reflection-page {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    .reflection-hero {
+        padding: 35px 25px;
+        min-height: auto;
+    }
+
+    .hero-art { display: none; }
+
+    .reflection-hero h1 { font-size: 58px; }
+
+    .reflection-intro {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .intro-title { font-size: 35px; }
+
+    .reflection-grid { grid-template-columns: 1fr; }
+
+    .reflection-card { min-height: 220px; }
+
+    .journey-section { padding: 28px 20px; }
+
+    .journey-heading h2 { font-size: 30px; }
+
+    .growth-grid { grid-template-columns: 1fr; }
+
+    .growth-card { padding: 25px; }
+
+    .lesson-points { grid-template-columns: 1fr; }
+
+    .lessons-learned { padding: 25px; }
+
+    .final-reflection { padding: 40px 22px; }
+
+    .final-reflection h2 { font-size: 34px; }
+
+    .final-quote { font-size: 21px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame"><span>PS</span></div>
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT ME</a>
+        <a href="lessons.html">LESSONS</a>
+        <a href="activities.html">ACTIVITIES</a>
+        <a href="group-project.html">GROUP PROJECT</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="reflection.html" class="active">REFLECTION</a>
+    </nav>
+
+    <a href="contact.html" class="connect-button">
+        LET'S CONNECT <span>→</span>
+    </a>
+</header>
+
+<main class="reflection-page">
+
+    <!-- HERO -->
+
+    <section class="reflection-hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow">A PERSONAL JOURNEY OF GROWTH</p>
+
+            <h1>
+                Becoming<br>
+                <span>Better.</span>
+            </h1>
+
+            <p class="hero-description">
+                Every lesson, every challenge and every experience
+                has been a small step towards becoming a more
+                confident, capable and thoughtful version of myself.
+            </p>
+
+            <span class="hero-note">
+                REFLECT &nbsp; • &nbsp; LEARN &nbsp; • &nbsp; GROW
+            </span>
+        </div>
+
+        <div class="hero-art">
+            <span>Me</span>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+
+    <section class="reflection-intro">
+        <div>
+            <span class="intro-label">01 / LOOKING BACK</span>
+            <h2 class="intro-title">
+                More than just<br>
+                <span>a module.</span>
+            </h2>
+        </div>
+
+        <div class="intro-text">
+            <p>
+                Looking back on my Professional Skills journey,
+                I realise that learning goes beyond completing
+                lessons and assignments. It is about understanding
+                myself, recognising my strengths, improving my
+                weaknesses and learning how to approach different
+                situations with confidence.
+            </p>
+
+            <p style="margin-top:15px;">
+                Throughout this journey, I had opportunities to
+                explore new ideas, work with others, face challenges
+                and develop skills that I can carry into my personal
+                life and future career.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHAT SHAPED ME -->
+
+    <section class="reflection-section">
+        <div class="reflection-section-heading">
+            <small>02 / WHAT SHAPED ME</small>
+            <h2>Lessons Beyond the Classroom</h2>
+            <p>
+                Different experiences helped me discover different
+                parts of myself.
+            </p>
+        </div>
+
+        <div class="reflection-grid">
+
+            <article class="reflection-card">
+                <div class="card-top">
+                    <span class="card-number">01</span>
+                    <span class="card-symbol">✦</span>
+                </div>
+                <div>
+                    <h3>Self-Awareness</h3>
+                    <p>
+                        Understanding my strengths, weaknesses,
+                        values and the areas where I still need
+                        to improve.
+                    </p>
+                </div>
+            </article>
+
+            <article class="reflection-card">
+                <div class="card-top">
+                    <span class="card-number">02</span>
+                    <span class="card-symbol">↗</span>
+                </div>
+                <div>
+                    <h3>Communication</h3>
+                    <p>
+                        Learning to express my thoughts clearly,
+                        listen carefully and communicate with
+                        confidence and respect.
+                    </p>
+                </div>
+            </article>
+
+            <article class="reflection-card">
+                <div class="card-top">
+                    <span class="card-number">03</span>
+                    <span class="card-symbol">◇</span>
+                </div>
+                <div>
+                    <h3>Teamwork</h3>
+                    <p>
+                        Discovering the importance of cooperation,
+                        sharing responsibilities and appreciating
+                        different perspectives.
+                    </p>
+                </div>
+            </article>
+
+            <article class="reflection-card">
+                <div class="card-top">
+                    <span class="card-number">04</span>
+                    <span class="card-symbol">◎</span>
+                </div>
+                <div>
+                    <h3>Confidence</h3>
+                    <p>
+                        Becoming more comfortable with new
+                        experiences, participating in activities
+                        and stepping outside my comfort zone.
+                    </p>
+                </div>
+            </article>
+
+            <article class="reflection-card">
+                <div class="card-top">
+                    <span class="card-number">05</span>
+                    <span class="card-symbol">♡</span>
+                </div>
+                <div>
+                    <h3>Empathy</h3>
+                    <p>
+                        Understanding the importance of kindness,
+                        social responsibility and considering
+                        the needs of others.
+                    </p>
+                </div>
+            </article>
+
+            <article class="reflection-card">
+                <div class="card-top">
+                    <span class="card-number">06</span>
+                    <span class="card-symbol">✧</span>
+                </div>
+                <div>
+                    <h3>Adaptability</h3>
+                    <p>
+                        Learning to respond to challenges,
+                        consider different solutions and
+                        remain open to change.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- MY JOURNEY -->
+
+    <section class="journey-section">
+        <div class="journey-heading">
+            <small>03 / MY JOURNEY</small>
+            <h2>Small Steps, Big Growth</h2>
+        </div>
+
+        <div class="journey-list">
+
+            <div class="journey-item">
+                <div class="journey-dot">01</div>
+                <div>
+                    <h3>Discovering Myself</h3>
+                    <p>
+                        Exploring my identity, personal values,
+                        strengths and professional goals.
+                    </p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-dot">02</div>
+                <div>
+                    <h3>Building Professional Skills</h3>
+                    <p>
+                        Learning about portfolios, CV writing,
+                        interviews, communication and professional
+                        etiquette.
+                    </p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-dot">03</div>
+                <div>
+                    <h3>Learning Through Experiences</h3>
+                    <p>
+                        Taking part in innovation and survival
+                        activities and developing a better
+                        understanding of teamwork and adaptability.
+                    </p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-dot">04</div>
+                <div>
+                    <h3>Making a Difference Together</h3>
+                    <p>
+                        Participating in the Ocean Crew turtle
+                        conservation project and understanding
+                        the value of community service.
+                    </p>
+                </div>
+            </div>
+
+            <div class="journey-item">
+                <div class="journey-dot">05</div>
+                <div>
+                    <h3>Looking Towards the Future</h3>
+                    <p>
+                        Recognising the skills I have developed
+                        and identifying the areas I want to
+                        continue improving.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BEFORE AND NOW -->
+
+    <section class="growth-section">
+        <div class="reflection-section-heading">
+            <small>04 / PERSONAL GROWTH</small>
+            <h2>Before & Beyond</h2>
+            <p>
+                Reflecting on how my mindset and approach have developed.
+            </p>
+        </div>
+
+        <div class="growth-grid">
+
+            <article class="growth-card before">
+                <small>WHERE I STARTED</small>
+                <h3>Before</h3>
+                <ul>
+                    <li>Sometimes hesitant to step outside my comfort zone.</li>
+                    <li>Still discovering my personal strengths.</li>
+                    <li>Learning how to communicate more confidently.</li>
+                    <li>Developing my approach to teamwork.</li>
+                    <li>Unsure how to present myself professionally.</li>
+                </ul>
+            </article>
+
+            <article class="growth-card after">
+                <small>WHAT I AM WORKING TOWARDS</small>
+                <h3>Now & Beyond</h3>
+                <ul>
+                    <li>More willing to explore new opportunities.</li>
+                    <li>More aware of my strengths and weaknesses.</li>
+                    <li>Improving my professional communication.</li>
+                    <li>Understanding shared responsibility.</li>
+                    <li>More prepared to present my skills and experiences.</li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- BIGGEST LESSONS -->
+
+    <section class="lessons-learned">
+        <span class="intro-label">05 / THINGS I WILL CARRY FORWARD</span>
+        <h2>What This Journey Taught Me</h2>
+
+        <div class="lesson-points">
+
+            <div class="lesson-point">
+                <span>✦</span>
+                <p>
+                    Growth happens when I am willing to learn
+                    from experiences and mistakes.
+                </p>
+            </div>
+
+            <div class="lesson-point">
+                <span>✦</span>
+                <p>
+                    Good communication and teamwork are essential
+                    in both personal and professional life.
+                </p>
+            </div>
+
+            <div class="lesson-point">
+                <span>✦</span>
+                <p>
+                    Small actions can create meaningful
+                    contributions to society.
+                </p>
+            </div>
+
+            <div class="lesson-point">
+                <span>✦</span>
+                <p>
+                    Confidence develops through practice,
+                    preparation and experience.
+                </p>
+            </div>
+
+            <div class="lesson-point">
+                <span>✦</span>
+                <p>
+                    Professional development is a continuous
+                    process, not a final destination.
+                </p>
+            </div>
+
+            <div class="lesson-point">
+                <span>✦</span>
+                <p>
+                    Being open to change helps me become
+                    more adaptable and resilient.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL REFLECTION -->
+
+    <section class="final-reflection">
+        <span class="final-label">06 / MY FINAL REFLECTION</span>
+        <h2>A Journey That Continues</h2>
+
+        <p>
+            This Professional Skills journey has helped me understand
+            that becoming a professional is not only about academic
+            knowledge or technical ability. It is also about how I
+            communicate, how I treat others, how I respond to challenges
+            and how willing I am to keep learning.
+
+            <br><br>
+
+            I know there are still many things I need to improve,
+            but I am leaving this journey with a better understanding
+            of myself and the person I want to become. I hope to
+            continue applying these lessons in my studies, career
+            and everyday life.
+        </p>
+
+        <div class="final-quote">
+            "I am not the same person who started this journey."
+        </div>
+    </section>
+
+    <!-- SIGN OFF -->
+
+    <section class="reflection-signoff">
+        <p>DISCIPLINED • CURIOUS • PURPOSEFUL</p>
+        <h2>Still learning. Still growing. Always becoming.</h2>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>A BETTER ME, ALWAYS</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

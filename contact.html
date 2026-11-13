@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Let's Connect | Professional Skills Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+
+/* =====================================
+   CONTACT PAGE
+===================================== */
+
+.contact-page {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 0 80px;
+}
+
+/* HERO */
+
+.contact-hero {
+    background: #4b3427;
+    border-radius: 15px;
+    padding: 65px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 45px;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+}
+
+.contact-eyebrow {
+    color: #c9dfed;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
+}
+
+.contact-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 7vw, 78px);
+    line-height: 1.08;
+    color: #fffdf9;
+    margin-bottom: 20px;
+}
+
+.contact-hero h1 span {
+    color: #f6e5aa;
+    font-style: italic;
+}
+
+.contact-hero p {
+    color: #eee8df;
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 550px;
+}
+
+.contact-decoration {
+    position: absolute;
+    right: -65px;
+    bottom: -140px;
+    width: 340px;
+    height: 340px;
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 50%;
+}
+
+.contact-decoration::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border: 1px solid #f6e5aa;
+    border-radius: 50%;
+    top: 55px;
+    left: 55px;
+}
+
+.contact-decoration::after {
+    content: "✦";
+    position: absolute;
+    top: 105px;
+    left: 105px;
+    color: #f6e5aa;
+    font-size: 65px;
+}
+
+/* INTRO */
+
+.contact-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.contact-intro small {
+    color: #567a9c;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.contact-intro h2 {
+    font-family: "Playfair Display", serif;
+    color: #4b3427;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.contact-intro p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #756d65;
+}
+
+/* CONTACT GRID */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 45px;
+}
+
+.contact-card {
+    min-height: 205px;
+    border-radius: 12px;
+    padding: 27px;
+    text-decoration: none;
+    color: #25201c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(75,52,39,.12);
+}
+
+.contact-card.email-card {
+    background: #f6e5aa;
+}
+
+.contact-card.phone-card {
+    background: #c9dfed;
+}
+
+.contact-card.linkedin-card {
+    background: #f4d9dc;
+}
+
+.contact-card.github-card {
+    background: #eee8df;
+}
+
+.contact-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(75,52,39,.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.contact-arrow {
+    font-size: 22px;
+    color: #4b3427;
+    transition: transform .3s;
+}
+
+.contact-card:hover .contact-arrow {
+    transform: translate(4px, -4px);
+}
+
+.contact-card small {
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #567a9c;
+}
+
+.contact-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    color: #4b3427;
+    margin: 8px 0;
+}
+
+.contact-card p {
+    font-size: 12px;
+    color: #625a52;
+    overflow-wrap: anywhere;
+}
+
+/* LOCATION */
+
+.contact-location {
+    background: #dce8df;
+    border-radius: 12px;
+    padding: 27px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 45px;
+}
+
+.location-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+}
+
+.contact-location small {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #567a9c;
+}
+
+.contact-location h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: #4b3427;
+    margin: 5px 0;
+}
+
+.contact-location p {
+    font-size: 12px;
+    color: #625a52;
+}
+
+/* CLOSING */
+
+.contact-closing {
+    background: #4b3427;
+    border-radius: 13px;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.contact-closing h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: #fffdf9;
+    margin-bottom: 12px;
+}
+
+.contact-closing p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #eee8df;
+    max-width: 620px;
+    margin: auto;
+}
+
+.contact-closing span {
+    display: block;
+    color: #f6e5aa;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 21px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+    .contact-page {
+        width: 92%;
+        padding: 35px 0 55px;
+    }
+
+    .contact-hero {
+        padding: 40px 25px;
+    }
+
+    .contact-decoration {
+        opacity: .3;
+        right: -180px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-card {
+        min-height: 180px;
+    }
+
+    .contact-intro h2 {
+        font-size: 29px;
+    }
+
+    .contact-location {
+        padding: 22px;
+    }
+
+    .contact-closing h2 {
+        font-size: 27px;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT ME</a>
+        <a href="lessons.html">LESSONS</a>
+        <a href="activities.html">ACTIVITIES</a>
+        <a href="group-project.html">GROUP PROJECT</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="reflection.html">REFLECTION</a>
+    </nav>
+
+    <a href="contact.html" class="connect-button active">
+        LET'S CONNECT <span>→</span>
+    </a>
+
+</header>
+
+
+<main class="contact-page">
+
+
+
+    <!-- INTRODUCTION -->
+
+    <section class="contact-intro">
+
+        <small>GET IN TOUCH</small>
+
+        <h2>Find Me Through</h2>
+
+        <p>
+            Whether it's a professional opportunity, collaboration
+            or simply a conversation, here are the best ways
+            to contact me.
+        </p>
+
+    </section>
+
+
+    <!-- CONTACT CARDS -->
+
+    <section class="contact-grid">
+
+
+        <!-- EMAIL -->
+
+        <a href="mailto:YOUR_EMAIL@example.com"
+           class="contact-card email-card">
+
+            <div class="contact-card-top">
+
+                <div class="contact-icon">✉</div>
+
+                <span class="contact-arrow">↗</span>
+
+            </div>
+
+            <div>
+
+                <small>01 / EMAIL</small>
+
+                <h3>Email Me</h3>
+
+                <p>nikifdo2006@gmail.com</p>
+
+            </div>
+
+        </a>
+
+
+        <!-- PHONE -->
+
+        <a href="tel:+947XXXXXXXX"
+           class="contact-card phone-card">
+
+            <div class="contact-card-top">
+
+                <div class="contact-icon">☎</div>
+
+                <span class="contact-arrow">↗</span>
+
+            </div>
+
+            <div>
+
+                <small>02 / PHONE</small>
+
+                <h3>Call Me</h3>
+
+                <p>+94 77 202 3465</p>
+
+            </div>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a href="https://www.linkedin.com/in/nicoli-fernando-88a81b416?utm_source=chatgpt.comL"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-card linkedin-card">
+
+            <div class="contact-card-top">
+
+                <div class="contact-icon">in</div>
+
+                <span class="contact-arrow">↗</span>
+
+            </div>
+
+            <div>
+
+                <small>03 / PROFESSIONAL NETWORK</small>
+
+                <h3>LinkedIn</h3>
+
+                <p>Connect with me professionally.</p>
+
+            </div>
+
+        </a>
+
+
+        <!-- GITHUB -->
+
+        <a href="https://github.com/nicolifernando"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-card github-card">
+
+            <div class="contact-card-top">
+
+                <div class="contact-icon">⌘</div>
+
+                <span class="contact-arrow">↗</span>
+
+            </div>
+
+            <div>
+
+                <small>04 / MY PROJECTS</small>
+
+                <h3>GitHub</h3>
+
+                <p>Explore my projects and development work.</p>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+    <!-- LOCATION -->
+
+    <section class="contact-location">
+
+        <div class="location-icon">⌖</div>
+
+        <div>
+
+            <small>BASED IN</small>
+
+            <h3>Sri Lanka</h3>
+
+            <p>Open to professional connections and opportunities.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLOSING -->
+
+    <section class="contact-closing">
+
+        <h2>Thank You for Visiting!</h2>
+
+        <p>
+            Thank you for taking the time to explore my
+            Professional Skills Portfolio. I look forward
+            to connecting, learning and creating new
+            opportunities.
+        </p>
+
+        <span>Every connection begins with a conversation.</span>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>A BETTER ME, ALWAYS</span>
+
+</footer>
+
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

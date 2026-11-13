@@ -1,0 +1,1219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 09 | Negotiation Skills</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+.lesson09-page {
+    width: 94%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 22px 0 40px;
+}
+
+.lesson09-sheet {
+    background: #fffdf9;
+    padding: 10px 10px 24px;
+    margin-bottom: 18px;
+    min-height: 0;
+}
+
+/* NAVIGATION */
+
+.lesson09-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.lesson09-back {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.lesson09-back-icon {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #201a17;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.lesson09-page-number {
+    font-size: 12px;
+    letter-spacing: 4px;
+    padding-left: 28px;
+    border-left: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson09-page-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #8b8b8b;
+}
+
+.lesson09-page-dot.active {
+    background: #567a9c;
+    border-color: #567a9c;
+}
+
+/* HEADING */
+
+.lesson09-heading {
+    display: grid;
+    grid-template-columns: 1fr 95px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 17px;
+}
+
+.lesson09-label {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 3px;
+}
+
+.lesson09-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 5.5vw, 76px);
+    line-height: .95;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.lesson09-heading h1 span {
+    color: #567a9c;
+}
+
+.lesson09-subtitle {
+    margin-top: 11px;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.lesson09-number {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #f6e5aa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson09-number strong {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    line-height: 1;
+}
+
+.lesson09-number span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* PAGE 1 GRID */
+
+.lesson09-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(260px, 360px);
+    grid-template-areas:
+        "intro importance image"
+        "table table image";
+    gap: 12px;
+    align-items: start;
+}
+
+/* GENERAL CARDS */
+
+.lesson09-card {
+    border-radius: 10px;
+    padding: 17px;
+    overflow: hidden;
+    height: fit-content;
+    min-width: 0;
+    align-self: start;
+}
+
+.lesson09-card.pink {
+    background: #f4d9dc;
+}
+
+.lesson09-card.yellow {
+    background: #f6e5aa;
+}
+
+.lesson09-card.blue {
+    background: #c9dfed;
+}
+
+.lesson09-card.cream {
+    background: #eee8df;
+}
+
+.lesson09-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.lesson09-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border: 3px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.lesson09-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 1.15;
+    margin: 3px 0 6px;
+}
+
+.lesson09-card p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* PAGE 1 CARD POSITIONS */
+
+.lesson09-grid > article:nth-of-type(1) {
+    grid-area: intro;
+}
+
+.lesson09-grid > article:nth-of-type(2) {
+    grid-area: importance;
+}
+
+.lesson09-grid > article:nth-of-type(3) {
+    grid-area: image;
+}
+
+.lesson09-grid > article:nth-of-type(4) {
+    grid-area: table;
+}
+
+/* INTRODUCTION QUOTE */
+
+.lesson09-quote {
+    margin-top: 12px;
+    padding: 11px 14px;
+    background: rgba(255,255,255,.48);
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* IMPORTANCE LIST */
+
+.lesson09-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.lesson09-list-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11.5px;
+    line-height: 1.35;
+}
+
+.lesson09-number-small {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+/* MAIN IMAGE */
+
+.lesson09-image-card {
+    grid-area: image;
+    background: #f1efeb;
+    padding: 10px;
+    border-radius: 10px;
+    height: 440px;
+    min-height: 0;
+    display: flex;
+}
+
+.lesson09-image-area {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 1px dashed #999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lesson09-image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TABLE / SKILLS SECTION */
+
+.table-card {
+    grid-area: table;
+    grid-column: 1 / 3;
+}
+
+.table-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 10px;
+}
+
+.table-box {
+    background: rgba(255,255,255,.5);
+    border-radius: 8px;
+    padding: 11px;
+}
+
+.table-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    margin: 0 0 6px;
+}
+
+.table-box ul {
+    padding-left: 17px;
+    margin: 0;
+}
+
+.table-box li {
+    font-size: 11px;
+    line-height: 1.45;
+    margin-bottom: 3px;
+}
+
+/* PAGE 2 GRID */
+
+.lesson09-page2-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-areas:
+        "cutlery meal"
+        "restaurant business"
+        "batna batna" !important;
+    grid-auto-rows: auto;
+    gap: 12px !important;
+    align-items: start !important;
+    width: 100%;
+}
+
+.cutlery-card {
+    grid-area: cutlery !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+.meal-card {
+    grid-area: meal !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+.restaurant-card {
+    grid-area: restaurant !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+.business-card {
+    grid-area: business !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+/* BATNA AND ZOPA */
+
+.batna-card {
+    grid-area: batna !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+.batna-zopa-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.batna-zopa-box {
+    background: rgba(255,255,255,.58);
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.batna-zopa-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    margin: 0 0 7px;
+}
+
+.batna-zopa-box p,
+.batna-zopa-box li {
+    font-size: 11.5px;
+    line-height: 1.5;
+}
+
+.batna-zopa-box ul {
+    padding-left: 18px;
+    margin: 7px 0;
+}
+
+.zopa-example {
+    margin-top: 10px;
+    background: rgba(255,255,255,.65);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.zopa-range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.zopa-range div {
+    flex: 1;
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 7px;
+    background: #fffdf9;
+    font-size: 11px;
+}
+
+.zopa-range .zopa-middle {
+    background: #c9dfed;
+    font-weight: 700;
+}
+
+.lesson09-page2-grid > article {
+    height: fit-content;
+    min-height: 0;
+    align-self: start;
+}
+
+.lesson09-page2-grid .lesson09-card {
+    padding: 17px;
+}
+
+/* PAGE 2 DETAIL LISTS */
+
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 9px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    background: rgba(255,255,255,.5);
+    padding: 7px 9px;
+    border-radius: 7px;
+    font-size: 11.5px;
+    line-height: 1.4;
+}
+
+.detail-number {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+/* BOTTOM NAVIGATION */
+
+.lesson08-bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.lesson08-outline {
+    border: 1px solid #4b2e20;
+    padding: 12px 23px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.lesson08-complete {
+    background: #4b2e20;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .lesson09-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "intro importance"
+            "image image"
+            "table table";
+    }
+
+    .lesson09-image-card {
+        height: 350px;
+    }
+
+    .lesson09-page2-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-areas:
+            "cutlery meal"
+            "restaurant business"
+            "batna batna" !important;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+    .lesson09-page {
+        width: 92%;
+        padding-top: 15px;
+    }
+
+    .lesson09-sheet {
+        padding: 8px 5px 20px;
+    }
+
+    .lesson09-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson09-number {
+        display: none;
+    }
+
+    .lesson09-heading h1 {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    .lesson09-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .lesson09-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "importance"
+            "image"
+            "table";
+    }
+
+    .lesson09-image-card {
+        height: 300px;
+    }
+
+    .table-card {
+        grid-column: auto;
+    }
+
+    .lesson09-page2-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+            "cutlery"
+            "meal"
+            "restaurant"
+            "business"
+            "batna" !important;
+    }
+
+    .lesson09-page-number {
+        display: none;
+    }
+
+    .lesson09-bottom {
+        justify-content: center;
+    }
+
+    .batna-zopa-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .zopa-range {
+        flex-direction: column;
+    }
+
+    .zopa-range div {
+        width: 100%;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 500px) {
+    .lesson09-heading h1 {
+        font-size: 38px;
+    }
+
+    .lesson09-card {
+        padding: 15px;
+    }
+
+    .lesson09-card h2 {
+        font-size: 20px;
+    }
+
+    .lesson09-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .table-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson09-bottom {
+        flex-direction: column;
+    }
+
+    .lesson09-outline,
+    .lesson09-complete {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">HOME</a>
+        <a href="../about.html">ABOUT ME</a>
+        <a href="../lessons.html" class="active">LESSONS</a>
+        <a href="../activities.html">ACTIVITIES</a>
+        <a href="../group-project.html">GROUP PROJECT</a>
+        <a href="../skills.html">SKILLS</a>
+        <a href="../reflection.html">REFLECTION</a>
+    </nav>
+
+    <a href="../index.html#connect" class="connect-button">
+        LET'S CONNECT <span>→</span>
+    </a>
+
+</header>
+
+<main class="lesson09-page">
+
+<!-- PAGE 1 -->
+
+<section class="lesson09-sheet" id="part1">
+
+    <div class="lesson09-top">
+        <a href="../lessons.html" class="lesson09-back">
+            <span class="lesson09-back-icon">←</span>
+            BACK TO LESSONS
+        </a>
+    </div>
+
+    <!-- HEADING -->
+
+    <div class="lesson09-heading">
+
+        <div>
+            <p class="lesson09-label">LESSON 09</p>
+
+            <h1>
+                Negotiation <span>Skills</span>
+            </h1>
+
+            <p class="lesson09-subtitle">
+                DISCUSS &nbsp; • &nbsp; UNDERSTAND &nbsp; • &nbsp; AGREE
+            </p>
+        </div>
+
+        <div class="lesson09-number">
+            <strong>09</strong>
+            <span>LESSON</span>
+        </div>
+
+    </div>
+
+    <div class="lesson09-grid">
+
+        <!-- INTRODUCTION -->
+
+        <article class="lesson09-card pink">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">♧</div>
+
+                <div>
+                    <h2>What are Negotiation Skills?</h2>
+
+                    <p>
+                        Negotiation skills are the abilities we use to discuss
+                        ideas, resolve differences and reach agreements with
+                        others. They help people understand different
+                        perspectives, communicate their needs and work towards
+                        a solution that is acceptable to everyone involved.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lesson09-quote">
+                A good negotiation is not about defeating the other person;
+                it is about finding common ground.
+            </div>
+
+        </article>
+
+        <!-- WHY IT MATTERS -->
+
+        <article class="lesson09-card yellow">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">◎</div>
+
+                <div>
+                    <h2>Why are Negotiation Skills Important?</h2>
+                </div>
+            </div>
+
+            <div class="lesson09-list">
+
+                <div class="lesson09-list-item">
+                    <span class="lesson09-number-small">01</span>
+                    Builds positive relationships
+                </div>
+
+                <div class="lesson09-list-item">
+                    <span class="lesson09-number-small">02</span>
+                    Helps resolve conflicts peacefully
+                </div>
+
+                <div class="lesson09-list-item">
+                    <span class="lesson09-number-small">03</span>
+                    Improves communication
+                </div>
+
+                <div class="lesson09-list-item">
+                    <span class="lesson09-number-small">04</span>
+                    Encourages better decisions
+                </div>
+
+                <div class="lesson09-list-item">
+                    <span class="lesson09-number-small">05</span>
+                    Develops confidence
+                </div>
+
+                <div class="lesson09-list-item">
+                    <span class="lesson09-number-small">06</span>
+                    Supports professional growth
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- MAIN IMAGE -->
+
+        <article class="lesson09-image-card">
+
+            <div class="lesson09-image-area">
+                <img
+                    src="../assets/images/l9.png"
+                    alt="Negotiation skills"
+                >
+            </div>
+
+        </article>
+
+        <!-- KEY SKILLS -->
+
+        <article class="lesson09-card blue table-card">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">◇</div>
+
+                <div>
+                    <h2>Key Skills of an Effective Negotiator</h2>
+
+                    <p>
+                        Successful negotiation requires a combination of
+                        communication, understanding and problem-solving skills.
+                    </p>
+                </div>
+            </div>
+
+            <div class="table-columns">
+
+                <div class="table-box">
+                    <h3>Communication</h3>
+                    <ul>
+                        <li>Listen actively</li>
+                        <li>Express ideas clearly</li>
+                        <li>Ask relevant questions</li>
+                        <li>Use respectful language</li>
+                    </ul>
+                </div>
+
+                <div class="table-box">
+                    <h3>Understanding</h3>
+                    <ul>
+                        <li>Recognise others' needs</li>
+                        <li>Consider different views</li>
+                        <li>Show empathy</li>
+                        <li>Manage emotions</li>
+                    </ul>
+                </div>
+
+                <div class="table-box">
+                    <h3>Problem-Solving</h3>
+                    <ul>
+                        <li>Explore alternatives</li>
+                        <li>Think creatively</li>
+                        <li>Find common ground</li>
+                        <li>Consider outcomes</li>
+                    </ul>
+                </div>
+
+                <div class="table-box">
+                    <h3>Professionalism</h3>
+                    <ul>
+                        <li>Stay calm and patient</li>
+                        <li>Be confident</li>
+                        <li>Remain flexible</li>
+                        <li>Keep promises</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- PAGE 2 -->
+
+<section class="lesson09-sheet" id="part2">
+
+    <div class="lesson09-page2-grid">
+
+        <!-- NEGOTIATION PROCESS -->
+
+        <article class="lesson09-card yellow cutlery-card">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">01</div>
+
+                <div>
+                    <h2>Steps in a Successful Negotiation</h2>
+
+                    <p>
+                        A structured approach can make a negotiation more
+                        effective and productive.
+                    </p>
+                </div>
+            </div>
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+                    <span class="detail-number">01</span>
+                    <span><strong>Prepare:</strong> Understand the topic, your goals and priorities.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">02</span>
+                    <span><strong>Understand:</strong> Identify the other party's needs and expectations.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">03</span>
+                    <span><strong>Discuss:</strong> Share your views and listen carefully.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">04</span>
+                    <span><strong>Explore:</strong> Consider different options and possible compromises.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">05</span>
+                    <span><strong>Agree:</strong> Confirm a solution that both parties accept.</span>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- NEGOTIATION STRATEGIES -->
+
+        <article class="lesson09-card pink meal-card">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">02</div>
+
+                <div>
+                    <h2>Useful Negotiation Strategies</h2>
+                </div>
+            </div>
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+                    <span class="detail-number">01</span>
+                    Aim for a win-win outcome.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">02</span>
+                    Ask questions to clarify expectations.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">03</span>
+                    Focus on interests, not just positions.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">04</span>
+                    Be flexible and consider alternatives.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">05</span>
+                    Know your priorities and limits.
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- COMMON MISTAKES -->
+
+        <article class="lesson09-card blue restaurant-card">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">03</div>
+
+                <div>
+                    <h2>Common Negotiation Mistakes</h2>
+                </div>
+            </div>
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+                    <span class="detail-number">01</span>
+                    Entering a discussion without preparation.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">02</span>
+                    Interrupting or not listening to others.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">03</span>
+                    Becoming aggressive or disrespectful.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">04</span>
+                    Ignoring the other party's concerns.
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">05</span>
+                    Rushing into an agreement.
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- REAL-WORLD APPLICATION -->
+
+        <article class="lesson09-card cream business-card">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">04</div>
+
+                <div>
+                    <h2>Negotiation in Everyday Life</h2>
+                </div>
+            </div>
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+                    <span class="detail-number">01</span>
+                    <span><strong>University:</strong> Dividing group tasks and agreeing on deadlines.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">02</span>
+                    <span><strong>Workplace:</strong> Discussing responsibilities and work expectations.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">03</span>
+                    <span><strong>Business:</strong> Agreeing on prices, contracts and partnerships.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">04</span>
+                    <span><strong>Personal Life:</strong> Resolving disagreements and making shared decisions.</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-number">05</span>
+                    <span><strong>Teamwork:</strong> Finding solutions when team members have different opinions.</span>
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- BATNA AND ZOPA -->
+
+        <article class="lesson09-card blue batna-card">
+
+            <div class="lesson09-card-header">
+                <div class="lesson09-icon">◇</div>
+
+                <div>
+                    <h2>BATNA &amp; ZOPA in Negotiation</h2>
+
+                    <p>
+                        Two important concepts that help negotiators make
+                        informed decisions, understand their limits and
+                        reach mutually acceptable agreements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="batna-zopa-grid">
+
+                <!-- BATNA -->
+
+                <div class="batna-zopa-box">
+
+                    <h3>01. BATNA</h3>
+
+                    <p>
+                        <strong>Best Alternative to a Negotiated Agreement</strong>
+                    </p>
+
+                    <p>
+                        BATNA is the best alternative available to a person
+                        if the current negotiation does not result in an
+                        agreement. It helps a negotiator decide whether to
+                        accept an offer or walk away.
+                    </p>
+
+                    <ul>
+                        <li>Identify alternative options before negotiating.</li>
+                        <li>Understand your minimum acceptable outcome.</li>
+                        <li>Avoid accepting an unfavourable agreement.</li>
+                        <li>Strengthen your negotiating position.</li>
+                    </ul>
+
+                    <p>
+                        <strong>Example:</strong> If a job applicant receives
+                        a suitable offer from another company, that offer can
+                        serve as their BATNA if the current employer cannot
+                        meet their expectations.
+                    </p>
+
+                </div>
+
+                <!-- ZOPA -->
+
+                <div class="batna-zopa-box">
+
+                    <h3>02. ZOPA</h3>
+
+                    <p>
+                        <strong>Zone of Possible Agreement</strong>
+                    </p>
+
+                    <p>
+                        ZOPA is the range in which the minimum acceptable
+                        terms of one party overlap with the maximum acceptable
+                        terms of the other party. An agreement is possible
+                        when both parties' acceptable ranges overlap.
+                    </p>
+
+                    <ul>
+                        <li>Identify both parties' acceptable limits.</li>
+                        <li>Find areas of common interest.</li>
+                        <li>Explore mutually acceptable offers.</li>
+                        <li>Work towards a beneficial agreement.</li>
+                    </ul>
+
+                    <div class="zopa-example">
+
+                        <strong>Example: Furniture Price Negotiation</strong>
+
+                        <p>
+                            A buyer is willing to pay up to Rs. 100,000,
+                            while the seller is willing to accept a minimum
+                            of Rs. 80,000.
+                        </p>
+
+                        <div class="zopa-range">
+
+                            <div>
+                                <strong>Rs. 80,000</strong>
+                                <br>
+                                Seller's minimum
+                            </div>
+
+                            <div class="zopa-middle">
+                                <strong>ZOPA</strong>
+                                <br>
+                                Rs. 80,000–100,000
+                            </div>
+
+                            <div>
+                                <strong>Rs. 100,000</strong>
+                                <br>
+                                Buyer's maximum
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <div class="lesson08-bottom">
+
+        <a href="lesson-08.html" class="lesson08-outline">
+            ← PREVIOUS
+        </a>
+
+        <a href="lesson-10.html" class="lesson08-complete">
+            COMPLETE LESSON →
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>
+        A BETTER ME, ALWAYS
+    </span>
+
+</footer>
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Activities | Professional Skills Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* ACTIVITIES PAGE */
+
+        .activities-page {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 65px 0 85px;
+        }
+
+        .activities-heading {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 55px;
+        }
+
+        .activities-heading .eyebrow {
+            font-size: 11px;
+            letter-spacing: 4px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #567a9c;
+        }
+
+        .activities-heading h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1.15;
+            color: #4b3427;
+            margin-bottom: 18px;
+        }
+
+        .activities-heading h1 span {
+            color: #567a9c;
+        }
+
+        .activities-heading > p:last-child {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #756d65;
+        }
+
+        /* THREE ACTIVITY CARDS */
+
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .activity-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 340px;
+            padding: 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #25201c;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 30px rgba(75, 52, 39, 0.12);
+        }
+
+        .activity-card.yellow-card {
+            background: #f6e5aa;
+        }
+
+        .activity-card.blue-card {
+            background: #c9dfed;
+        }
+
+        .activity-card.pink-card {
+            background: #f4d9dc;
+        }
+
+        .activity-card .lesson-icon {
+            width: 58px;
+            height: 58px;
+            border: 2px solid rgba(255,255,255,0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.25);
+        }
+
+        .activity-card .lesson-content small {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+            color: #567a9c;
+        }
+
+        .activity-card .lesson-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(27px, 3vw, 36px);
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #4b3427;
+        }
+
+        .activity-card .lesson-content p {
+            max-width: 420px;
+            font-size: 13px;
+            line-height: 1.8;
+            color: #514940;
+        }
+
+        .activity-card .lesson-arrow {
+            position: absolute;
+            right: 30px;
+            bottom: 25px;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(75,52,39,0.5);
+            border-radius: 50%;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .activity-card:hover .lesson-arrow {
+            background: #4b3427;
+            color: white;
+        }
+
+        /* THIRD CARD CENTERED */
+
+        .activity-card:nth-child(3) {
+            grid-column: 1 / -1;
+            width: calc(50% - 12.5px);
+            justify-self: center;
+        }
+
+        /* CLOSING SECTION */
+
+        .activities-note {
+            text-align: center;
+            margin-top: 45px;
+            padding: 25px;
+            background: #f4d9dc;
+            border-radius: 10px;
+        }
+
+        .activities-note h2 {
+            font-family: "Playfair Display", serif;
+            color: #4b3427;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .activities-note p {
+            font-size: 12px;
+            line-height: 1.8;
+            color: #625a52;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 750px) {
+            .activities-page {
+                padding: 45px 0 60px;
+            }
+
+            .activities-heading {
+                margin-bottom: 35px;
+            }
+
+            .activity-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .activity-card {
+                min-height: 300px;
+                padding: 27px;
+            }
+
+            .activity-card:nth-child(3) {
+                grid-column: auto;
+                width: 100%;
+            }
+
+            .activities-note {
+                margin-top: 30px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .activities-page {
+                width: 92%;
+            }
+
+            .activity-card {
+                min-height: 290px;
+                padding: 23px;
+            }
+
+            .activity-card .lesson-content h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT ME</a>
+        <a href="lessons.html">LESSONS</a>
+        <a href="activities.html" class="active">ACTIVITIES</a>
+        <a href="group-project.html">GROUP PROJECT</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="reflection.html">REFLECTION</a>
+    </nav>
+
+    <a href="contact.html" class="connect-button">
+        LET'S CONNECT <span>→</span>
+    </a>
+
+</header>
+
+
+<main class="activities-page">
+
+    <!-- PAGE HEADING -->
+
+    <section class="activities-heading">
+
+        <p class="eyebrow">BEYOND THE CLASSROOM</p>
+
+        <h1>
+            Activities & <span>Experiences</span>
+        </h1>
+
+        <p>
+            Exploring new challenges, developing practical skills
+            and learning through meaningful experiences beyond
+            traditional classroom activities.
+        </p>
+
+    </section>
+
+
+    <!-- ACTIVITY CARDS -->
+
+    <section class="activity-grid">
+
+        <!-- ACTIVITY 01: INNOVATION SKILLS -->
+
+        <a href="activities/innovation-skills.html"
+           class="lesson-card activity-card yellow-card">
+
+            <div>
+                <div class="lesson-icon">✦</div>
+
+                <div class="lesson-content">
+                    <small>ACTIVITY 01</small>
+
+                    <h2>Innovation Skills</h2>
+
+                    <p>
+                        Exploring creativity, innovative thinking
+                        and the ability to develop new ideas and
+                        approaches to challenges.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lesson-arrow">→</div>
+
+        </a>
+
+
+        <!-- ACTIVITY 02: SURVIVAL SKILLS -->
+
+        <a href="activities/survival-skills.html"
+           class="lesson-card activity-card blue-card">
+
+            <div>
+                <div class="lesson-icon">◇</div>
+
+                <div class="lesson-content">
+                    <small>ACTIVITY 02</small>
+
+                    <h2>Survival Skills</h2>
+
+                    <p>
+                        Developing practical survival skills,
+                        adaptability, teamwork and confidence
+                        through engaging challenges.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lesson-arrow">→</div>
+
+        </a>
+
+
+        <!-- ACTIVITY 03: DIABETES WORKSHOP -->
+
+        <a href="activities/diabetes-workshop.html"
+           class="lesson-card activity-card pink-card">
+
+            <div>
+                <div class="lesson-icon">♡</div>
+
+                <div class="lesson-content">
+                    <small>ACTIVITY 03</small>
+
+                    <h2>Diabetes Awareness Workshop</h2>
+
+                    <p>
+                        Exploring diabetes awareness, health
+                        education and the importance of
+                        understanding healthy lifestyle choices.
+                    </p>
+                </div>
+            </div>
+
+            <div class="lesson-arrow">→</div>
+
+        </a>
+
+    </section>
+
+
+    <!-- CLOSING SECTION -->
+
+    <section class="activities-note">
+
+        <h2>Learning Through Experience</h2>
+
+        <p>
+            Every activity offered an opportunity to explore
+            something new, interact with others and develop
+            knowledge and skills that extend beyond the classroom.
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>A BETTER ME, ALWAYS</span>
+
+</footer>
+
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

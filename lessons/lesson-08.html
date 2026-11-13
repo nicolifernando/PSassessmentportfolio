@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 08 | Dining Etiquette</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <style>
+
+/* =========================================
+   LESSON 08 – DINING ETIQUETTE
+   COMPLETE UPDATED CSS
+   ========================================= */
+
+.lesson08-page {
+    width: 94%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 22px 0 40px;
+}
+
+.lesson08-sheet {
+    background: #fffdf9;
+    padding: 10px 10px 24px;
+    margin-bottom: 18px;
+    min-height: 0;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.lesson08-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.lesson08-back {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.lesson08-back-icon {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #201a17;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.lesson08-page-number {
+    font-size: 12px;
+    letter-spacing: 4px;
+    padding-left: 28px;
+    border-left: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson08-page-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #8b8b8b;
+}
+
+.lesson08-page-dot.active {
+    background: #567a9c;
+    border-color: #567a9c;
+}
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.lesson08-heading {
+    display: grid;
+    grid-template-columns: 1fr 95px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 17px;
+}
+
+.lesson08-label {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 3px;
+}
+
+.lesson08-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 5.5vw, 76px);
+    line-height: .95;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.lesson08-heading h1 span {
+    color: #567a9c;
+}
+
+.lesson08-subtitle {
+    margin-top: 11px;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.lesson08-number {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #f6e5aa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson08-number strong {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    line-height: 1;
+}
+
+.lesson08-number span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* =========================================
+   PAGE 1 GRID
+   ========================================= */
+
+.lesson08-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(260px, 360px);
+
+    grid-template-areas:
+        "intro importance image"
+        "table table image";
+
+    gap: 12px;
+    align-items: start;
+}
+
+/* GENERAL CARDS */
+
+.lesson08-card {
+    border-radius: 10px;
+    padding: 17px;
+    overflow: hidden;
+    height: fit-content;
+    min-width: 0;
+    align-self: start;
+}
+
+.lesson08-card.pink {
+    background: #f4d9dc;
+}
+
+.lesson08-card.yellow {
+    background: #f6e5aa;
+}
+
+.lesson08-card.blue {
+    background: #c9dfed;
+}
+
+.lesson08-card.cream {
+    background: #eee8df;
+}
+
+.lesson08-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.lesson08-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border: 3px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+
+.lesson08-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 1.15;
+    margin: 3px 0 6px;
+}
+
+.lesson08-card p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* PAGE 1 CARD POSITIONS */
+
+.lesson08-grid > article:nth-of-type(1) {
+    grid-area: intro;
+}
+
+.lesson08-grid > article:nth-of-type(2) {
+    grid-area: importance;
+}
+
+.lesson08-grid > article:nth-of-type(3) {
+    grid-area: image;
+}
+
+.lesson08-grid > article:nth-of-type(4) {
+    grid-area: table;
+}
+
+/* =========================================
+   INTRODUCTION QUOTE
+   ========================================= */
+
+.lesson08-quote {
+    margin-top: 12px;
+    padding: 11px 14px;
+    background: rgba(255,255,255,.48);
+    border-radius: 8px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   WHY IT MATTERS LIST
+   ========================================= */
+
+.lesson08-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.lesson08-list-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11.5px;
+    line-height: 1.35;
+}
+
+.lesson08-number-small {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+/* =========================================
+   MAIN IMAGE
+   ========================================= */
+
+.lesson08-image-card {
+    grid-area: image;
+    background: #f1efeb;
+    padding: 10px;
+    border-radius: 10px;
+    height: 440px;
+    min-height: 0;
+    display: flex;
+}
+
+.lesson08-image-area {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 1px dashed #999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lesson08-image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   TABLE ETIQUETTE
+   ========================================= */
+
+.table-card {
+    grid-area: table;
+    grid-column: 1 / 3;
+}
+
+.table-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 10px;
+}
+
+.table-box {
+    background: rgba(255,255,255,.5);
+    border-radius: 8px;
+    padding: 11px;
+}
+
+.table-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    margin: 0 0 6px;
+}
+
+.table-box ul {
+    padding-left: 17px;
+    margin: 0;
+}
+
+.table-box li {
+    font-size: 11px;
+    line-height: 1.45;
+    margin-bottom: 3px;
+}
+
+/* =========================================
+   PAGE 2 – FOUR CARD LAYOUT
+   ========================================= */
+
+.lesson08-page2-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr)) !important;
+
+    grid-template-areas:
+        "cutlery meal"
+        "restaurant business" !important;
+
+    grid-auto-rows: auto;
+    gap: 12px !important;
+    align-items: start !important;
+    width: 100%;
+}
+
+/* CARD POSITIONS */
+
+.cutlery-card {
+    grid-area: cutlery !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+.meal-card {
+    grid-area: meal !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+.restaurant-card {
+    grid-area: restaurant !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+.business-card {
+    grid-area: business !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+}
+
+/* Remove unused Key Takeaways area */
+
+.takeaway-card {
+    display: none !important;
+}
+
+/* Keep cards compact */
+
+.lesson08-page2-grid > article {
+    height: fit-content;
+    min-height: 0;
+    align-self: start;
+}
+
+.lesson08-page2-grid .lesson08-card {
+    padding: 17px;
+}
+
+/* =========================================
+   PAGE 2 DETAIL LISTS
+   ========================================= */
+
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 9px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    background: rgba(255,255,255,.5);
+    padding: 7px 9px;
+    border-radius: 7px;
+    font-size: 11.5px;
+    line-height: 1.4;
+}
+
+.detail-number {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 10px;
+}
+
+/* =========================================
+   BOTTOM NAVIGATION
+   ========================================= */
+
+.lesson08-bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.lesson08-outline {
+    border: 1px solid #4b2e20;
+    padding: 12px 23px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.lesson08-complete {
+    background: #4b2e20;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .lesson08-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        grid-template-areas:
+            "intro importance"
+            "image image"
+            "table table";
+    }
+
+    .lesson08-image-card {
+        height: 350px;
+    }
+
+    .lesson08-page2-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+
+        grid-template-areas:
+            "cutlery meal"
+            "restaurant business" !important;
+    }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .lesson08-page {
+        width: 92%;
+        padding-top: 15px;
+    }
+
+    .lesson08-sheet {
+        padding: 8px 5px 20px;
+    }
+
+    .lesson08-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson08-number {
+        display: none;
+    }
+
+    .lesson08-heading h1 {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    .lesson08-subtitle {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .lesson08-grid {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "intro"
+            "importance"
+            "image"
+            "table";
+    }
+
+    .lesson08-image-card {
+        height: 300px;
+    }
+
+    .table-card {
+        grid-column: auto;
+    }
+
+    .lesson08-page2-grid {
+        grid-template-columns: 1fr !important;
+
+        grid-template-areas:
+            "cutlery"
+            "meal"
+            "restaurant"
+            "business" !important;
+    }
+
+    .lesson08-page-number {
+        display: none;
+    }
+
+    .lesson08-bottom {
+        justify-content: center;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .lesson08-heading h1 {
+        font-size: 38px;
+    }
+
+    .lesson08-card {
+        padding: 15px;
+    }
+
+    .lesson08-card h2 {
+        font-size: 20px;
+    }
+
+    .lesson08-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .table-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson08-bottom {
+        flex-direction: column;
+    }
+
+    .lesson08-outline,
+    .lesson08-complete {
+        text-align: center;
+    }
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     SAME NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+
+  <nav class="nav-links">
+    <a href="../index.html">HOME</a>
+    <a href="../about.html">ABOUT ME</a>
+    <a href="../lessons.html"class="active">LESSONS</a>
+    <a href="../activities.html" >ACTIVITIES</a>
+    <a href="../group-project.html">GROUP PROJECT</a>
+    <a href="../skills.html">SKILLS</a>
+    <a href="../reflection.html">REFLECTION</a>
+</nav>
+
+
+    <a href="../index.html#connect" class="connect-button">
+
+        LET'S CONNECT <span>→</span>
+
+    </a>
+
+</header>
+
+
+
+<main class="lesson08-page">
+
+
+<!-- ==================================================
+     PAGE 1
+=================================================== -->
+
+<section class="lesson08-sheet" id="part1">
+
+
+    <div class="lesson08-top">
+
+        <a href="../lessons.html" class="lesson08-back">
+
+            <span class="lesson08-back-icon">←</span>
+
+            BACK TO LESSONS
+
+        </a>
+
+
+
+    </div>
+
+
+
+    <!-- HEADING -->
+
+    <div class="lesson08-heading">
+
+        <div>
+
+            <p class="lesson08-label">
+                LESSON 08
+            </p>
+
+            <h1>
+                Dining <span>Etiquette</span>
+            </h1>
+
+            <p class="lesson08-subtitle">
+                RESPECT &nbsp; • &nbsp; CONFIDENCE &nbsp; • &nbsp; CLASS
+            </p>
+
+        </div>
+
+
+        <div class="lesson08-number">
+
+            <strong>08</strong>
+
+            <span>LESSON</span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="lesson08-grid">
+
+
+        <!-- INTRODUCTION -->
+
+        <article class="lesson08-card pink">
+
+            <div class="lesson08-card-header">
+
+                <div class="lesson08-icon">
+                    ♡
+                </div>
+
+                <div>
+
+                    <h2>
+                        What is Dining Etiquette?
+                    </h2>
+
+                    <p>
+                        Dining is more than just eating. It is a social
+                        experience that reflects who we are. Good dining
+                        etiquette shows respect for others, creates a positive
+                        impression and helps us feel comfortable in different
+                        social and professional settings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="lesson08-quote">
+
+                The way we behave at the table can influence
+                how others perceive us.
+
+            </div>
+
+        </article>
+
+
+
+        <!-- WHY IT MATTERS -->
+
+        <article class="lesson08-card yellow">
+
+            <div class="lesson08-card-header">
+
+                <div class="lesson08-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Why is Dining Etiquette Important?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="lesson08-list">
+
+                <div class="lesson08-list-item">
+
+                    <span class="lesson08-number-small">
+                        01
+                    </span>
+
+                    Creates a good first impression
+
+                </div>
+
+
+                <div class="lesson08-list-item">
+
+                    <span class="lesson08-number-small">
+                        02
+                    </span>
+
+                    Shows respect for others
+
+                </div>
+
+
+                <div class="lesson08-list-item">
+
+                    <span class="lesson08-number-small">
+                        03
+                    </span>
+
+                    Helps social situations feel smoother
+
+                </div>
+
+
+                <div class="lesson08-list-item">
+
+                    <span class="lesson08-number-small">
+                        04
+                    </span>
+
+                    Builds discipline and confidence
+
+                </div>
+
+
+                <div class="lesson08-list-item">
+
+                    <span class="lesson08-number-small">
+                        05
+                    </span>
+
+                    Reflects personality and values
+
+                </div>
+
+
+                <div class="lesson08-list-item">
+
+                    <span class="lesson08-number-small">
+                        06
+                    </span>
+
+                    Supports professional relationships
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MAIN IMAGE -->
+
+        <article class="lesson08-image-card">
+
+            <div class="lesson08-image-area">
+
+                <img
+                    src="../assets/images/78.png"
+                    alt="Dining etiquette"
+                >
+
+            </div>
+
+        </article>
+
+
+
+        <!-- TABLE ETIQUETTE -->
+
+        <article class="lesson08-card blue table-card">
+
+            <div class="lesson08-card-header">
+
+                <div class="lesson08-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h2>
+                        The Basics of Table Etiquette
+                    </h2>
+
+                    <p>
+                        Small details at the table can make a big difference
+                        in creating a respectful and comfortable dining
+                        experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-columns">
+
+
+                <div class="table-box">
+
+                    <h3>
+                        Before the Meal
+                    </h3>
+
+                    <ul>
+
+                        <li>Wait until everyone is seated</li>
+
+                        <li>Place your napkin appropriately</li>
+
+                        <li>Keep your phone away from the table</li>
+
+                        <li>Wait for the host before beginning</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="table-box">
+
+                    <h3>
+                        At the Table
+                    </h3>
+
+                    <ul>
+
+                        <li>Sit upright and maintain good posture</li>
+
+                        <li>Keep elbows off the table while eating</li>
+
+                        <li>Use utensils appropriately</li>
+
+                        <li>Chew with your mouth closed</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="table-box">
+
+                    <h3>
+                        Conversation
+                    </h3>
+
+                    <ul>
+
+                        <li>Be respectful and polite</li>
+
+                        <li>Allow others to speak</li>
+
+                        <li>Avoid talking with food in your mouth</li>
+
+                        <li>Keep conversation appropriate</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="table-box">
+
+                    <h3>
+                        General Courtesy
+                    </h3>
+
+                    <ul>
+
+                        <li>Thank the host</li>
+
+                        <li>Be considerate of others</li>
+
+                        <li>Avoid unnecessary noise</li>
+
+                        <li>Follow the atmosphere of the setting</li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 2
+=================================================== -->
+
+
+    <div class="lesson08-page2-grid">
+
+
+        <!-- CUTLERY -->
+
+        <article class="lesson08-card yellow cutlery-card">
+
+            <div class="lesson08-card-header">
+
+                <div class="lesson08-icon">
+                    ♢
+                </div>
+
+                <div>
+
+                    <h2>
+                        How to Use Cutlery
+                    </h2>
+
+                    <p>
+                        Knowing where each utensil belongs helps create a
+                        confident and organised dining experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+
+                    <span class="detail-number">01</span>
+
+                    Forks are placed on the left.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">02</span>
+
+                    Knives are placed on the right.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">03</span>
+
+                    Spoons are placed on the right.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">04</span>
+
+                    Use utensils from the outside towards the plate.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">05</span>
+
+                    Place utensils neatly on the plate when finished.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MEAL ETIQUETTE -->
+
+        <article class="lesson08-card pink meal-card">
+
+            <div class="lesson08-card-header">
+
+                <div class="lesson08-icon">
+                    ◉
+                </div>
+
+                <div>
+
+                    <h2>
+                        During the Meal
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+
+                    <span class="detail-number">01</span>
+
+                    Cut food into small pieces at a time.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">02</span>
+
+                    Keep your fork and knife on the plate when pausing.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">03</span>
+
+                    Do not put too much food in your mouth.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">04</span>
+
+                    Eat at a comfortable pace.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">05</span>
+
+                    Avoid reaching across other people.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KEY TAKEAWAYS -->
+
+        
+
+   
+
+
+        <!-- RESTAURANT ETIQUETTE -->
+
+        <article class="lesson08-card blue restaurant-card">
+
+            <div class="lesson08-card-header">
+
+                <div class="lesson08-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h2>
+                        Restaurant Etiquette
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+
+                    <span class="detail-number">01</span>
+
+                    Be respectful and polite to restaurant staff.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">02</span>
+
+                    Follow the restaurant's atmosphere and expectations.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">03</span>
+
+                    Avoid speaking loudly or disturbing other diners.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">04</span>
+
+                    Use your phone discreetly.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">05</span>
+
+                    Thank staff for their service.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PROFESSIONAL DINING -->
+
+        <article class="lesson08-card cream business-card">
+
+            <div class="lesson08-card-header">
+
+                <div class="lesson08-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Dining in Professional Settings
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="detail-list">
+
+                <div class="detail-item">
+
+                    <span class="detail-number">01</span>
+
+                    Arrive on time.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">02</span>
+
+                    Dress appropriately for the occasion.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">03</span>
+
+                    Maintain professional conversation.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">04</span>
+
+                    Avoid controversial or uncomfortable topics.
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-number">05</span>
+
+                    Show appreciation to your host.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- BOTTOM NAV -->
+
+    <div class="lesson08-bottom">
+
+        <a href="lesson-07.html" class="lesson08-outline">
+            ← PREVIOUS
+        </a>
+
+
+        <a href="lesson-09.html" class="lesson08-complete">
+            COMPLETE LESSON →
+        </a>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     SAME FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>
+        A BETTER ME, ALWAYS
+    </span>
+
+</footer>
+
+
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

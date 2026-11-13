@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 05 | Emotional Intelligence</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+.lesson05-page{width:94%;max-width:1450px;margin:auto;padding:22px 0 35px}
+.lesson05-sheet{background:#fffdf9;padding:12px 14px 25px;margin-bottom:25px}
+.lesson05-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.lesson05-back{display:flex;align-items:center;gap:11px;font-size:12px;letter-spacing:2px;font-weight:600}
+.lesson05-back-icon{width:30px;height:30px;border:1px solid #201a17;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.lesson05-heading{display:grid;grid-template-columns:1fr 92px;align-items:center;gap:20px;margin-bottom:18px}
+.lesson05-label{font-size:11px;letter-spacing:6px;margin:0 0 4px}
+.lesson05-heading h1{font-family:"Playfair Display",serif;font-size:clamp(48px,5.2vw,75px);line-height:.95;letter-spacing:-3px;margin:0}
+.lesson05-heading h1 span{color:#567a9c}
+.lesson05-subtitle{margin:11px 0 0;font-size:11px;letter-spacing:4px}
+.lesson05-number{width:90px;height:90px;border-radius:50%;background:#f6e5aa;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.lesson05-number strong{font-family:"Playfair Display",serif;font-size:35px;line-height:1}
+.lesson05-number span{font-size:9px;letter-spacing:2px;margin-top:4px}
+.lesson05-card{border-radius:9px;padding:16px;min-width:0}
+.lesson05-card.yellow{background:#f6e5aa}
+.lesson05-card.blue{background:#c9dfed}
+.lesson05-card.pink{background:#f4d9dc}
+.lesson05-card.cream{background:#eee8df}
+.lesson05-card.lilac{background:#e7def8}
+.lesson05-card-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:9px}
+.lesson05-icon{width:43px;height:43px;min-width:43px;border:3px solid rgba(255,255,255,.82);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:21px}
+.lesson05-card h2{font-family:"Playfair Display",serif;font-size:21px;line-height:1.15;margin:3px 0 5px}
+.lesson05-card h3{font-family:"Playfair Display",serif;font-size:15px;margin:0 0 5px}
+.lesson05-card p{font-size:11.5px;line-height:1.5;margin:0}
+.lesson05-card ul{margin:7px 0 0;padding-left:18px}
+.lesson05-card li{font-size:11px;line-height:1.45;margin-bottom:4px}
+.small-label{font-size:8px!important;letter-spacing:3px;margin-top:3px!important}
+.lesson05-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:stretch}
+.ei-definition{grid-column:1;grid-row:1}
+.ei-components{grid-column:2;grid-row:1}
+.ei-functions{grid-column:3;grid-row:1}
+.ei-types{grid-column:1 / 3;grid-row:2}
+.ei-image{grid-column:3;grid-row:2 / 4;background:#f1efeb;padding:9px;border-radius:9px}
+.ei-basic{grid-column:1;grid-row:3}
+.ei-expression{grid-column:2;grid-row:3}
+.info-list{display:flex;flex-direction:column;gap:6px;margin-top:9px}
+.info-row{display:flex;gap:8px;align-items:flex-start;background:rgba(255,255,255,.55);border-radius:7px;padding:8px}
+.info-row b{font-family:"Playfair Display",serif;font-size:14px;min-width:22px}
+.info-row span{font-size:10.7px;line-height:1.4}
+.emotion-columns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.emotion-column{background:rgba(255,255,255,.55);padding:10px;border-radius:7px}
+.emotion-column h3{font-size:14px}
+.emotion-column p{font-size:10.5px}
+.emotion-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.emotion-tag{background:rgba(255,255,255,.65);border-radius:20px;padding:5px 9px;font-size:10px}
+.emotion-six{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+.emotion-six div{background:rgba(255,255,255,.6);padding:8px;border-radius:7px;text-align:center}
+.emotion-six strong{font-family:"Playfair Display",serif;font-size:14px;display:block}
+.emotion-six span{font-size:10px}
+.image-frame{width:100%;height:100%;min-height:270px;border:1px dashed #999;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.image-frame img{width:100%;height:100%;object-fit:cover;display:block}
+
+.lesson05-page2-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;align-items:stretch}
+.ei-definition2{grid-column:1;grid-row:1}
+.ei-eq-iq{grid-column:2 / 4;grid-row:1}
+.ei-four-branch{grid-column:1 / 3;grid-row:2}
+.ei-goleman{grid-column:3;grid-row:2}
+.ei-work{grid-column:1;grid-row:3}
+.ei-health{grid-column:2;grid-row:3}
+.ei-manage{grid-column:3;grid-row:3}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+.compare-box{background:rgba(255,255,255,.58);padding:10px;border-radius:7px}
+.compare-box h3{font-size:16px}
+.compare-box li{font-size:10.5px}
+.branch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:8px}
+.branch-item{background:rgba(255,255,255,.58);padding:10px;border-radius:7px}
+.branch-item strong{font-family:"Playfair Display",serif;font-size:14px}
+.branch-item p{font-size:10.5px;margin-top:4px}
+.domain-list{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.domain-row{display:grid;grid-template-columns:105px 1fr;gap:7px;align-items:center}
+.domain-row strong{background:rgba(255,255,255,.6);padding:8px;border-radius:6px;font-size:10.5px}
+.domain-row span{font-size:10.5px;line-height:1.35}
+.lesson05-bottom{display:flex;justify-content:flex-end;gap:12px;margin-top:17px}
+.lesson05-outline{border:1px solid #4b2e20;color:#4b2e20;padding:12px 24px;border-radius:30px;font-size:11px;letter-spacing:2px}
+.lesson05-complete{background:#4b2e20;color:#fff;padding:12px 25px;border-radius:30px;font-size:11px;letter-spacing:2px}
+
+@media(max-width:1050px){
+.lesson05-grid,.lesson05-page2-grid{grid-template-columns:1fr 1fr}
+.ei-definition,.ei-components,.ei-functions,.ei-types,.ei-image,.ei-basic,.ei-expression,.ei-definition2,.ei-eq-iq,.ei-four-branch,.ei-goleman,.ei-work,.ei-health,.ei-manage{grid-column:auto;grid-row:auto}
+.ei-image{min-height:280px}
+.ei-eq-iq,.ei-four-branch{grid-column:1 / 3}
+}
+@media(max-width:700px){
+.lesson05-page{width:92%}
+.lesson05-heading{grid-template-columns:1fr}
+.lesson05-number{display:none}
+.lesson05-heading h1{font-size:43px}
+.lesson05-grid,.lesson05-page2-grid{grid-template-columns:1fr}
+.ei-eq-iq,.ei-four-branch{grid-column:auto}
+.emotion-columns,.compare-grid,.branch-grid{grid-template-columns:1fr}
+.emotion-six{grid-template-columns:repeat(2,1fr)}
+.lesson05-bottom{flex-direction:column}
+.lesson05-outline,.lesson05-complete{text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+<a href="../index.html" class="nav-logo">
+<div class="logo-frame"><span>PS</span></div>
+<div class="logo-text">
+<strong>Professional</strong>
+<span>Skills Portfolio</span>
+</div>
+</a>
+
+<nav class="nav-links">
+<a href="../index.html">HOME</a>
+<a href="../about.html">ABOUT ME</a>
+<a href="../lessons.html" class="active">LESSONS</a>
+<a href="../activities.html">ACTIVITIES</a>
+<a href="../group-project.html">GROUP PROJECT</a>
+<a href="../skills.html">SKILLS</a>
+<a href="../reflection.html">REFLECTION</a>
+</nav>
+
+<a href="../index.html#connect" class="connect-button">
+LET'S CONNECT <span>→</span>
+</a>
+</header>
+
+<main class="lesson05-page">
+
+<!-- PAGE 1 -->
+
+<section class="lesson05-sheet" id="part1">
+
+<div class="lesson05-top">
+<a href="../lessons.html" class="lesson05-back">
+<span class="lesson05-back-icon">←</span>
+BACK TO LESSONS
+</a>
+</div>
+
+<div class="lesson05-heading">
+<div>
+<p class="lesson05-label">LESSON 05</p>
+<h1>Emotional <span>Intelligence</span></h1>
+<p class="lesson05-subtitle">
+RECOGNIZE &nbsp; • &nbsp; UNDERSTAND &nbsp; • &nbsp; MANAGE &nbsp; • &nbsp; CONNECT
+</p>
+</div>
+<div class="lesson05-number">
+<strong>05</strong>
+<span>LESSON</span>
+</div>
+</div>
+
+<div class="lesson05-grid">
+
+<article class="lesson05-card yellow ei-definition">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">♡</div>
+<div>
+<h2>Emotional Wellness</h2>
+<p>
+Have a positive attitude, high self-esteem, a strong sense of self,
+and the ability to recognize and share a wide range of feelings
+with others in a constructive way.
+</p>
+</div>
+</div>
+<div class="info-list">
+<div class="info-row"><b>01</b><span>Emotional wellness involves understanding and expressing feelings constructively.</span></div>
+<div class="info-row"><b>02</b><span>Emotions influence the way we think, behave and interact with others.</span></div>
+</div>
+</article>
+
+<article class="lesson05-card pink ei-components">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">◎</div>
+<div>
+<h2>What Are Emotions?</h2>
+<p>A complex psychological state involving three distinctive components:</p>
+</div>
+</div>
+<div class="info-list">
+<div class="info-row"><b>01</b><span><strong>Subjective experience:</strong> the feeling component.</span></div>
+<div class="info-row"><b>02</b><span><strong>Physiological response:</strong> the body's physical reaction.</span></div>
+<div class="info-row"><b>03</b><span><strong>Behavioural response:</strong> the way an emotion is expressed through behaviour.</span></div>
+</div>
+</article>
+
+<article class="lesson05-card blue ei-functions">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">✦</div>
+<div><h2>Functions of Emotions</h2></div>
+</div>
+<ul>
+<li>Emotions have an action orientation.</li>
+<li>They add colour to our lives.</li>
+<li>They are adaptive and serve a useful purpose.</li>
+<li>They serve as a tipping point in dealing with dilemmas.</li>
+<li>They facilitate social interactions.</li>
+</ul>
+<div class="info-row" style="margin-top:9px">
+<span><strong>Social function:</strong> emotions communicate our feelings, influence how others interact with us, facilitate social interaction, and can create, maintain or dissolve relationships.</span>
+</div>
+</article>
+
+<article class="lesson05-card cream ei-types">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">◇</div>
+<div>
+<h2>Some Emotions Are Learned, Others Are Hard-Wired</h2>
+<p>The lecture distinguishes between taught emotions and hard-wired emotions.</p>
+</div>
+</div>
+<div class="emotion-columns">
+<div class="emotion-column">
+<h3>Taught Emotions</h3>
+<div class="emotion-tags">
+<span class="emotion-tag">Humility</span>
+<span class="emotion-tag">Forgiveness</span>
+<span class="emotion-tag">Empathy</span>
+<span class="emotion-tag">Optimism</span>
+<span class="emotion-tag">Compassion</span>
+<span class="emotion-tag">Sympathy</span>
+<span class="emotion-tag">Patience</span>
+<span class="emotion-tag">Shame</span>
+<span class="emotion-tag">Pride</span>
+<span class="emotion-tag">Gratitude</span>
+</div>
+</div>
+<div class="emotion-column">
+<h3>Hard-Wired Emotions</h3>
+<div class="emotion-tags">
+<span class="emotion-tag">Sadness</span>
+<span class="emotion-tag">Joy</span>
+<span class="emotion-tag">Disgust</span>
+<span class="emotion-tag">Anger</span>
+<span class="emotion-tag">Surprise</span>
+<span class="emotion-tag">Fear</span>
+</div>
+</div>
+</div>
+</article>
+
+<article class="lesson05-card yellow ei-basic">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">☺</div>
+<div>
+<h2>Paul Ekman's Six Basic Emotions</h2>
+<p>The lecture presents six basic emotions and their facial expressions.</p>
+</div>
+</div>
+<div class="emotion-six">
+<div><strong>Joy</strong><span>Smile, lifted cheeks</span></div>
+<div><strong>Anger</strong><span>Brows drawn together</span></div>
+<div><strong>Disgust</strong><span>Wrinkled nose</span></div>
+<div><strong>Surprise</strong><span>Raised brows, widened eyes</span></div>
+<div><strong>Sadness</strong><span>Inner brows raised</span></div>
+<div><strong>Fear</strong><span>Eyes widened, brows raised</span></div>
+</div>
+</article>
+
+<article class="lesson05-card lilac ei-expression">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">↗</div>
+<div><h2>How Emotions Are Expressed</h2></div>
+</div>
+<p>
+The social-expressive component is the communicative aspect of emotion.
+Postures, gestures, vocalizations and facial expressions make emotions public.
+</p>
+<ul>
+<li>Includes verbal and non-verbal communication.</li>
+<li>Helps us interpret a situation.</li>
+<li>Shows how a person reacts to an event.</li>
+</ul>
+<div class="info-row" style="margin-top:8px">
+<span><strong>Mirror neurons:</strong> observing an action can trigger a simulation of that action and provide a neural basis for imitation and empathy.</span>
+</div>
+</article>
+
+<article class="ei-image">
+<div class="image-frame">
+<img src="../assets/images/ie.png" alt="Emotional intelligence visual">
+</div>
+</article>
+
+</div>
+</section>
+
+
+
+<div class="lesson05-page2-grid">
+
+<article class="lesson05-card yellow ei-definition2">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">♡</div>
+<div><h2>What Is Emotional Intelligence?</h2></div>
+</div>
+<p>
+Emotional intelligence (EI) is the ability to recognize and manage
+emotions in ourselves and in others in order to reach desired outcomes.
+</p>
+<div class="info-row" style="margin-top:10px">
+<span><strong>EQ</strong> refers to emotional intelligence, while <strong>IQ</strong> refers to intelligence quotient.</span>
+</div>
+</article>
+
+<article class="lesson05-card blue ei-eq-iq">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">⇄</div>
+<div>
+<h2>How Does EQ Differ From IQ?</h2>
+<p class="small-label">COMPARISON PRESENTED IN THE LECTURE · MHS 2005</p>
+</div>
+</div>
+<div class="compare-grid">
+<div class="compare-box">
+<h3>EQ – Emotional Quotient</h3>
+<ul>
+<li>Focuses on understanding and managing emotions.</li>
+<li>Can be enhanced throughout life.</li>
+<li>Recognized as an important predictor of potential success.</li>
+<li>Fosters understanding and management of our own emotions.</li>
+<li>Promotes positive relationships.</li>
+<li>Increases self-motivation and drive.</li>
+</ul>
+</div>
+<div class="compare-box">
+<h3>IQ – Intelligence Quotient</h3>
+<ul>
+<li>Focuses on developing cognitive abilities and is more academically oriented.</li>
+<li>Traditionally considered largely established at birth.</li>
+<li>Traditionally used to predict potential for success.</li>
+<li>Allows development of a needed knowledge base.</li>
+<li>Enables technical skills and abilities.</li>
+<li>Enables conceptual thinking.</li>
+</ul>
+</div>
+</div>
+</article>
+
+<article class="lesson05-card pink ei-four-branch">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">◇</div>
+<div>
+<h2>Four Areas of Emotional Intelligence</h2>
+<p>The lecture discusses perceiving, using, understanding and managing emotions.</p>
+</div>
+</div>
+<div class="branch-grid">
+<div class="branch-item">
+<strong>01. Perceiving Emotions</strong>
+<p>Recognizing emotions in ourselves and others through expressions and emotional signals.</p>
+</div>
+<div class="branch-item">
+<strong>02. Using Emotions</strong>
+<p>Using emotions to focus attention, reason and communicate, and to influence decision-making, creativity and problem-solving.</p>
+</div>
+<div class="branch-item">
+<strong>03. Understanding Emotions</strong>
+<p>Recognizing emotional triggers, blends of feelings, emotional changes over time and using a rich emotional vocabulary.</p>
+</div>
+<div class="branch-item">
+<strong>04. Managing Emotions</strong>
+<p>Staying open to feelings, blending emotions with thinking and reflectively monitoring emotions.</p>
+</div>
+</div>
+<div class="info-row" style="margin-top:8px">
+<span><strong>History:</strong> Peter Salovey and John Mayer developed the four-branch ability model. The lecture also mentions the Mayer-Salovey-Caruso Emotional Intelligence Test (MSCEIT).</span>
+</div>
+</article>
+
+<article class="lesson05-card cream ei-goleman">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">☆</div>
+<div>
+<h2>Goleman's Five Competencies</h2>
+<p class="small-label">FIVE INTER-RELATED DOMAINS</p>
+</div>
+</div>
+<div class="domain-list">
+<div class="domain-row">
+<strong>Self-awareness</strong>
+<span>Knowing your moods, emotions and drives, and their effect on others.</span>
+</div>
+<div class="domain-row">
+<strong>Self-regulation</strong>
+<span>Controlling or redirecting disruptive impulses and thinking before acting.</span>
+</div>
+<div class="domain-row">
+<strong>Motivation</strong>
+<span>Pursuing goals with energy and persistence beyond money or status.</span>
+</div>
+<div class="domain-row">
+<strong>Empathy</strong>
+<span>Sensing what others feel and understanding their emotional make-up.</span>
+</div>
+<div class="domain-row">
+<strong>Social skills</strong>
+<span>Handling relationships, reading social situations, finding common ground and building rapport.</span>
+</div>
+</div>
+</article>
+
+<article class="lesson05-card blue ei-work">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">▤</div>
+<div><h2>Emotional Intelligence at Work</h2></div>
+</div>
+<ul>
+<li>Complex jobs require higher levels of emotional intelligence.</li>
+<li>Careers of people with low EI may plateau early.</li>
+<li>Technical competencies may help you get a job, while high EI can support promotion.</li>
+<li>Customer satisfaction is an important issue in today's workplace.</li>
+</ul>
+<div class="info-row" style="margin-top:8px">
+<span><strong>Key idea:</strong> Technical knowledge and emotional skills both contribute to professional success.</span>
+</div>
+</article>
+
+<article class="lesson05-card pink ei-health">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">♡</div>
+<div><h2>Emotions and Health</h2></div>
+</div>
+<ul>
+<li>The lecture associates negative emotional states with unhealthy physical states.</li>
+<li>Positive emotional states are associated with healthier states.</li>
+<li>It highlights links with the cardiovascular and immune systems.</li>
+<li>S-IgA (secretory immunoglobulin A) is described as a first line of defence in the immune system.</li>
+</ul>
+<div class="info-row" style="margin-top:8px">
+<span><strong>Emotion and environment:</strong> positive emotional states can signal safety, while negative states can act as an alert that something needs attention.</span>
+</div>
+</article>
+
+<article class="lesson05-card yellow ei-manage">
+<div class="lesson05-card-header">
+<div class="lesson05-icon">◎</div>
+<div><h2>Managing Emotions</h2></div>
+</div>
+<div class="info-list">
+<div class="info-row"><b>01</b><span>Stay open to feelings.</span></div>
+<div class="info-row"><b>02</b><span>Blend emotions with thinking.</span></div>
+<div class="info-row"><b>03</b><span>Reflectively monitor emotions.</span></div>
+</div>
+<div class="info-row" style="margin-top:8px">
+<span><strong>Cognitive re-appraisal:</strong> reinterpret a situation or change thought patterns to change the emotional reaction.</span>
+</div>
+<div class="info-row" style="margin-top:7px">
+<span><strong>Emotional contagion:</strong> emotions can spread between people. The lecture encourages making emotional contagion work in our favour.</span>
+</div>
+</article>
+
+</div>
+
+<div class="lesson05-bottom">
+<a href="lesson-04.html" class="lesson05-outline">← PREVIOUS</a>
+<a href="lesson-06.html" class="lesson05-complete">COMPLETE LESSON →</a>
+</div>
+
+</section>
+</main>
+
+<footer class="footer">
+<span>DISCIPLINED &nbsp; • &nbsp; CURIOUS &nbsp; • &nbsp; PURPOSEFUL</span>
+<div class="footer-line"></div>
+<span>A BETTER ME, ALWAYS</span>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

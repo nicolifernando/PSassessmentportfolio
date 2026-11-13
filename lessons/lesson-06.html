@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 06 | Personal Branding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <style>
+
+        /* =====================================================
+           LESSON 06
+        ===================================================== */
+
+        .lesson06-page {
+            width: 94%;
+            max-width: 1450px;
+            margin: 0 auto;
+            padding: 22px 0 35px;
+        }
+
+        .lesson06-sheet {
+            background: #fffdf9;
+            padding: 8px 10px 25px;
+            margin-bottom: 30px;
+        }
+
+
+        /* =====================================================
+           TOP
+        ===================================================== */
+
+        .lesson06-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .lesson06-back {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: #201a17;
+        }
+
+        .lesson06-back-icon {
+            width: 28px;
+            height: 28px;
+            border: 1px solid #201a17;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .lesson06-page-number {
+            border-left: 1px solid #aaa;
+            padding-left: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .page-dot {
+            width: 11px;
+            height: 11px;
+            border: 1px solid #8b8b8b;
+            border-radius: 50%;
+        }
+
+        .page-dot.active {
+            background: #567a9c;
+            border-color: #567a9c;
+        }
+
+
+        /* =====================================================
+           HEADING
+        ===================================================== */
+
+        .lesson06-heading {
+            display: grid;
+            grid-template-columns: 1fr 95px;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+        .lesson06-label {
+            font-size: 11px;
+            letter-spacing: 6px;
+            margin: 0 0 2px;
+        }
+
+        .lesson06-heading h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 5.2vw, 75px);
+            line-height: .92;
+            letter-spacing: -3px;
+            margin: 0;
+            color: #201a17;
+        }
+
+        .lesson06-heading h1 span {
+            color: #567a9c;
+        }
+
+        .lesson06-subtitle {
+            margin: 11px 0 0;
+            font-size: 11px;
+            letter-spacing: 5px;
+            color: #18324c;
+        }
+
+        .lesson06-number {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            background: #f6e5aa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lesson06-number strong {
+            font-family: "Playfair Display", serif;
+            font-size: 35px;
+            line-height: 1;
+        }
+
+        .lesson06-number span {
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           GENERAL CARDS
+        ===================================================== */
+
+        .lesson06-card {
+            border-radius: 9px;
+            padding: 17px;
+        }
+
+        .lesson06-card.yellow {
+            background: #f6e5aa;
+        }
+
+        .lesson06-card.blue {
+            background: #c9dfed;
+        }
+
+        .lesson06-card.pink {
+            background: #f4d9dc;
+        }
+
+        .lesson06-card.cream {
+            background: #eee8df;
+        }
+
+        .lesson06-card.lilac {
+            background: #e7def8;
+        }
+
+        .lesson06-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+        }
+
+        .lesson06-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border: 3px solid rgba(255,255,255,.82);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 23px;
+            color: #132b43;
+        }
+
+        .lesson06-card h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            line-height: 1.15;
+            margin: 3px 0 5px;
+            color: #17334f;
+        }
+
+        .lesson06-card p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .small-label {
+            font-size: 8px !important;
+            letter-spacing: 3px;
+            margin-top: 3px !important;
+        }
+
+
+        /* =====================================================
+           PAGE 1 GRID
+        ===================================================== */
+
+        .lesson06-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr 420px;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+        }
+
+
+        /* WHAT IS PERSONAL BRANDING */
+
+        .branding-definition {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+
+        /* WHY BRANDING */
+
+        .branding-importance {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .importance-list {
+            margin: 8px 0 0;
+            padding-left: 18px;
+        }
+
+        .importance-list li {
+            font-size: 11px;
+            line-height: 1.4;
+            margin-bottom: 3px;
+        }
+
+
+        /* KEY ELEMENTS */
+
+        .branding-elements {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .element-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .element-row {
+            display: grid;
+            grid-template-columns: 40px 145px 1fr;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255,255,255,.55);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .element-number {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #dbeaf7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .element-row strong {
+            font-size: 10.5px;
+        }
+
+        .element-row span:last-child {
+            font-size: 10px;
+        }
+
+
+        /* BUILD BRAND */
+
+        .branding-process {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .process-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .process-row {
+            display: grid;
+            grid-template-columns: 38px 125px 1fr;
+            gap: 7px;
+            align-items: center;
+            background: rgba(255,255,255,.58);
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .process-number {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #f1dfa0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .process-row strong {
+            font-size: 10px;
+        }
+
+        .process-row span:last-child {
+            font-size: 9.5px;
+            line-height: 1.3;
+        }
+
+
+        /* IMAGE */
+
+        .lesson06-image-card {
+            grid-column: 3;
+            grid-row: 1 / 4;
+            background: #f1efeb;
+            padding: 10px;
+            border-radius: 9px;
+        }
+
+        .lesson06-image-area {
+            width: 100%;
+            height: 100%;
+            min-height: 590px;
+            border: 1px dashed #999;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lesson06-image-area img {
+            width: 100%;
+            height: 100%;
+            min-height: 590px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* LINKEDIN */
+
+        .linkedin-card {
+            grid-column: 1 / 3;
+            grid-row: 3;
+            background: #f4d9dc;
+        }
+
+        .linkedin-layout {
+            display: grid;
+            grid-template-columns: 65px 1fr 1.1fr;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .linkedin-logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #fffdf9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #102d49;
+        }
+
+        .linkedin-content h2 {
+            margin-bottom: 6px;
+        }
+
+        .linkedin-content p {
+            font-size: 10.5px;
+            line-height: 1.4;
+        }
+
+        .linkedin-checklist {
+            border-left: 1px solid rgba(60,40,30,.25);
+            padding-left: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 12px;
+        }
+
+        .linkedin-checklist p {
+            font-size: 9.5px;
+        }
+
+        .linkedin-checklist p::before {
+            content: "•";
+            margin-right: 5px;
+            color: #c45c75;
+        }
+
+
+        /* =====================================================
+           PAGE 2
+        ===================================================== */
+
+        .lesson06-page2-grid {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr 420px;
+            grid-template-rows: auto auto;
+            gap: 10px;
+        }
+
+
+        /* STEPS */
+
+        .brand-steps {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .brand-step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .brand-step {
+            display: grid;
+            grid-template-columns: 38px 170px 1fr;
+            gap: 8px;
+            align-items: center;
+            background: rgba(255,255,255,.5);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .brand-step-number {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #f6d5dc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .brand-step strong {
+            font-size: 10px;
+        }
+
+        .brand-step span:last-child {
+            font-size: 9.5px;
+            line-height: 1.3;
+        }
+
+
+        /* LINKEDIN PROFESSIONAL IDENTITY */
+
+        .linkedin-professional {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .linkedin-step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .linkedin-step {
+            display: grid;
+            grid-template-columns: 38px 1fr;
+            gap: 8px;
+            background: rgba(255,255,255,.55);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .linkedin-step-number {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #dbeaf7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .linkedin-step strong {
+            display: block;
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+
+        .linkedin-step span {
+            font-size: 9px;
+            line-height: 1.25;
+        }
+
+
+        /* PERSONAL BRAND STATEMENT */
+
+        .brand-statement {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .statement-row {
+            display: grid;
+            grid-template-columns: 62px 1fr;
+            gap: 8px;
+            align-items: stretch;
+            margin-bottom: 5px;
+        }
+
+        .statement-letter {
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .statement-row:nth-child(2) .statement-letter {
+            background: #f4d9dc;
+        }
+
+        .statement-row:nth-child(3) .statement-letter {
+            background: #e7def8;
+        }
+
+        .statement-row:nth-child(4) .statement-letter {
+            background: #c9dfed;
+        }
+
+        .statement-row:nth-child(5) .statement-letter {
+            background: #dce8d9;
+        }
+
+        .statement-content {
+            padding: 4px 3px;
+        }
+
+        .statement-content strong {
+            font-family: "Playfair Display", serif;
+            font-size: 11px;
+            color: #17334f;
+        }
+
+        .statement-content p {
+            font-size: 9px;
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+
+
+        /* COMMON MISTAKES */
+
+        .brand-mistakes {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .mistake-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .mistake-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,.55);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .mistake-icon {
+            width: 23px;
+            height: 23px;
+            min-width: 23px;
+            border-radius: 50%;
+            background: #f1c3c3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .mistake-row span:last-child {
+            font-size: 10.3px;
+        }
+
+
+        /* QUICK TIPS */
+
+        .brand-tips {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .quick-tip-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .quick-tip {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: rgba(255,255,255,.55);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .quick-tip-check {
+            width: 23px;
+            height: 23px;
+            min-width: 23px;
+            border-radius: 50%;
+            background: #dce8f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+
+        .quick-tip span:last-child {
+            font-size: 10.2px;
+        }
+
+
+        /* PERSONAL AREA */
+
+        .lesson06-side {
+            grid-column: 3;
+            grid-row: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .lesson06-side-card {
+            padding: 13px;
+            border-radius: 9px;
+        }
+
+        .lesson06-side-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .lesson06-side-card h2 {
+            font-size: 19px;
+        }
+
+        .personal-area {
+            height: 85px;
+            border: 1px dashed #888;
+            border-radius: 8px;
+            margin-top: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .personal-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* =====================================================
+           BOTTOM
+        ===================================================== */
+
+        .lesson06-bottom {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .lesson06-outline {
+            border: 1px solid #4b2e20;
+            color: #4b2e20;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .lesson06-complete {
+            background: #4b2e20;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1150px) {
+
+            .lesson06-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .lesson06-image-card {
+                grid-column: 1 / 3;
+                grid-row: auto;
+            }
+
+            .lesson06-image-area,
+            .lesson06-image-area img {
+                min-height: 400px;
+            }
+
+            .lesson06-page2-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .brand-statement,
+            .lesson06-side {
+                grid-column: 1 / 3;
+            }
+
+            .lesson06-side {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 800px) {
+
+            .lesson06-heading {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson06-number {
+                display: none;
+            }
+
+            .lesson06-heading h1 {
+                font-size: 48px;
+            }
+
+            .lesson06-grid,
+            .lesson06-page2-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .branding-definition,
+            .branding-importance,
+            .branding-elements,
+            .branding-process,
+            .lesson06-image-card,
+            .linkedin-card,
+            .brand-steps,
+            .linkedin-professional,
+            .brand-statement,
+            .brand-mistakes,
+            .brand-tips,
+            .lesson06-side {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .lesson06-side {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .linkedin-layout {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .linkedin-checklist {
+                grid-column: 2;
+                border-left: none;
+                padding-left: 0;
+            }
+
+            .lesson06-page-number {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .lesson06-page {
+                width: 92%;
+            }
+
+            .lesson06-heading h1 {
+                font-size: 40px;
+                letter-spacing: -2px;
+            }
+
+            .lesson06-subtitle {
+                letter-spacing: 3px;
+            }
+
+            .element-row,
+            .process-row,
+            .brand-step {
+                grid-template-columns: 35px 1fr;
+            }
+
+            .element-row span:last-child,
+            .process-row span:last-child,
+            .brand-step span:last-child {
+                grid-column: 2;
+            }
+
+            .linkedin-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .linkedin-checklist {
+                grid-column: auto;
+                grid-template-columns: 1fr;
+            }
+
+            .lesson06-bottom {
+                flex-direction: column;
+            }
+
+            .lesson06-outline,
+            .lesson06-complete {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SAME NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+  
+  <nav class="nav-links">
+    <a href="../index.html">HOME</a>
+    <a href="../about.html">ABOUT ME</a>
+    <a href="../lessons.html"class="active">LESSONS</a>
+    <a href="../activities.html" >ACTIVITIES</a>
+    <a href="../group-project.html">GROUP PROJECT</a>
+    <a href="../skills.html">SKILLS</a>
+    <a href="../reflection.html">REFLECTION</a>
+</nav>
+
+
+
+    <a href="../index.html#connect" class="connect-button">
+
+        LET'S CONNECT
+
+        <span>→</span>
+
+    </a>
+
+</header>
+
+
+
+<main class="lesson06-page">
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section class="lesson06-sheet" id="part1">
+
+
+    <div class="lesson06-top">
+
+        <a href="../lessons.html" class="lesson06-back">
+
+            <span class="lesson06-back-icon">
+                ←
+            </span>
+
+            BACK TO LESSONS
+
+        </a>
+
+
+        <div class="lesson06-page-number">
+
+            
+
+            
+        </div>
+
+    </div>
+
+
+
+    <!-- HEADING -->
+
+    <div class="lesson06-heading">
+
+        <div>
+
+            <p class="lesson06-label">
+                LESSON 06
+            </p>
+
+            <h1>
+                Personal <span>Branding</span>
+            </h1>
+
+            <p class="lesson06-subtitle">
+                DEFINE &nbsp; • &nbsp; COMMUNICATE &nbsp; • &nbsp; CREATE OPPORTUNITIES
+            </p>
+
+        </div>
+
+
+        <div class="lesson06-number">
+
+            <strong>
+                06
+            </strong>
+
+            <span>
+                LESSON
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="lesson06-grid">
+
+
+        <!-- WHAT IS PERSONAL BRANDING -->
+
+        <article class="lesson06-card yellow branding-definition">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h2>
+                        What is Personal Branding?
+                    </h2>
+
+                    <p>
+                        Personal branding is the intentional and consistent
+                        way you communicate your skills, values, strengths,
+                        personality and professional identity so that others
+                        understand what you offer and what makes you unique.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- WHY IMPORTANT -->
+
+        <article class="lesson06-card pink branding-importance">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Why is Personal Branding Important?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <ul class="importance-list">
+
+                <li>
+                    Helps you build a clear professional identity
+                </li>
+
+                <li>
+                    Communicates your value to others
+                </li>
+
+                <li>
+                    Creates credibility and trust
+                </li>
+
+                <li>
+                    Increases your visibility and opportunities
+                </li>
+
+                <li>
+                    Supports networking and career growth
+                </li>
+
+                <li>
+                    Helps you stay consistent across platforms
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- KEY ELEMENTS -->
+
+        <article class="lesson06-card blue branding-elements">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h2>
+                        Key Elements of a Personal Brand
+                    </h2>
+
+                    <p>
+                        Your personal brand is built through a combination of:
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="element-list">
+
+
+                <div class="element-row">
+
+                    <span class="element-number">
+                        01
+                    </span>
+
+                    <strong>
+                        Identity / Purpose
+                    </strong>
+
+                    <span>
+                        Who you are and what you stand for
+                    </span>
+
+                </div>
+
+
+                <div class="element-row">
+
+                    <span class="element-number">
+                        02
+                    </span>
+
+                    <strong>
+                        Strengths & Skills
+                    </strong>
+
+                    <span>
+                        What you are good at
+                    </span>
+
+                </div>
+
+
+                <div class="element-row">
+
+                    <span class="element-number">
+                        03
+                    </span>
+
+                    <strong>
+                        Values
+                    </strong>
+
+                    <span>
+                        What drives your decisions
+                    </span>
+
+                </div>
+
+
+                <div class="element-row">
+
+                    <span class="element-number">
+                        04
+                    </span>
+
+                    <strong>
+                        Target Audience
+                    </strong>
+
+                    <span>
+                        Who you want to reach
+                        (e.g. employers, peers)
+                    </span>
+
+                </div>
+
+
+                <div class="element-row">
+
+                    <span class="element-number">
+                        05
+                    </span>
+
+                    <strong>
+                        Communication Style
+                    </strong>
+
+                    <span>
+                        How you present yourself
+                        (online & offline)
+                    </span>
+
+                </div>
+
+
+                <div class="element-row">
+
+                    <span class="element-number">
+                        06
+                    </span>
+
+                    <strong>
+                        Online Presence
+                    </strong>
+
+                    <span>
+                        Your digital footprint
+                        (LinkedIn, GitHub, portfolio, etc.)
+                    </span>
+
+                </div>
+
+
+                <div class="element-row">
+
+                    <span class="element-number">
+                        07
+                    </span>
+
+                    <strong>
+                        Consistency
+                    </strong>
+
+                    <span>
+                        Maintaining a unified and authentic image
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BUILD YOUR BRAND -->
+
+        <article class="lesson06-card yellow branding-process">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h2>
+                        Build Your Personal Brand
+                    </h2>
+
+                    <p class="small-label">
+                        A STEP-BY-STEP PROCESS
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="process-list">
+
+
+                <div class="process-row">
+
+                    <span class="process-number">
+                        01
+                    </span>
+
+                    <strong>
+                        Know Yourself
+                    </strong>
+
+                    <span>
+                        Identify your passions, strengths and goals.
+                    </span>
+
+                </div>
+
+
+                <div class="process-row">
+
+                    <span class="process-number">
+                        02
+                    </span>
+
+                    <strong>
+                        Define Your Value
+                    </strong>
+
+                    <span>
+                        Understand what you offer and what makes you different.
+                    </span>
+
+                </div>
+
+
+                <div class="process-row">
+
+                    <span class="process-number">
+                        03
+                    </span>
+
+                    <strong>
+                        Build Your Presence
+                    </strong>
+
+                    <span>
+                        Create and optimise your online profiles.
+                    </span>
+
+                </div>
+
+
+                <div class="process-row">
+
+                    <span class="process-number">
+                        04
+                    </span>
+
+                    <strong>
+                        Share Your Work
+                    </strong>
+
+                    <span>
+                        Showcase your projects, skills and achievements.
+                    </span>
+
+                </div>
+
+
+                <div class="process-row">
+
+                    <span class="process-number">
+                        05
+                    </span>
+
+                    <strong>
+                        Review & Improve
+                    </strong>
+
+                    <span>
+                        Keep learning, seek feedback and update regularly.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- IMAGE -->
+
+        <article class="lesson06-image-card">
+
+            <div class="lesson06-image-area">
+
+                <img
+                    src="../assets/images/pb.png"
+                    alt="Personal branding visual"
+                >
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LINKEDIN -->
+
+        <article class="lesson06-card linkedin-card">
+
+            <div class="linkedin-layout">
+
+
+                <div class="linkedin-logo">
+                    in
+                </div>
+
+
+                <div class="linkedin-content">
+
+                    <h2>
+                        LinkedIn & Your Personal Brand
+                    </h2>
+
+                    <p>
+                        LinkedIn is a powerful platform that can function
+                        as your professional landing page. It helps you
+                        showcase your skills, experience, achievements
+                        and personality, and connect with opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="linkedin-checklist">
+
+                    <p>
+                        Professional photo
+                    </p>
+
+                    <p>
+                        Relevant skills
+                    </p>
+
+                    <p>
+                        Clear and compelling headline
+                    </p>
+
+                    <p>
+                        Projects / media
+                    </p>
+
+                    <p>
+                        Well-written About section
+                    </p>
+
+                    <p>
+                        Recommendations
+                    </p>
+
+                    <p>
+                        Education and experience
+                    </p>
+
+                    <p>
+                        Regular activity and networking
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section class="lesson06-sheet" id="part2">
+
+
+    
+
+
+    <div class="lesson06-page2-grid">
+
+
+        <!-- STEPS TO BUILD BRAND -->
+
+        <article class="lesson06-card pink brand-steps">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Steps to Build Your Personal Brand
+                    </h2>
+
+                    <p class="small-label">
+                        FROM SELF-AWARENESS TO OPPORTUNITIES
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="brand-step-list">
+
+
+                <div class="brand-step">
+
+                    <span class="brand-step-number">
+                        01
+                    </span>
+
+                    <strong>
+                        Identify Your Purpose
+                    </strong>
+
+                    <span>
+                        Understand what you are passionate about
+                        and what you want to be known for.
+                    </span>
+
+                </div>
+
+
+                <div class="brand-step">
+
+                    <span class="brand-step-number">
+                        02
+                    </span>
+
+                    <strong>
+                        Define Your Unique Value
+                    </strong>
+
+                    <span>
+                        List your strengths, skills and what makes
+                        you different.
+                    </span>
+
+                </div>
+
+
+                <div class="brand-step">
+
+                    <span class="brand-step-number">
+                        03
+                    </span>
+
+                    <strong>
+                        Know Your Audience
+                    </strong>
+
+                    <span>
+                        Understand who you want to reach
+                        (e.g. employers, peers, clients).
+                    </span>
+
+                </div>
+
+
+                <div class="brand-step">
+
+                    <span class="brand-step-number">
+                        04
+                    </span>
+
+                    <strong>
+                        Build Your Online Presence
+                    </strong>
+
+                    <span>
+                        Create and optimise your LinkedIn,
+                        portfolio and other platforms.
+                    </span>
+
+                </div>
+
+
+                <div class="brand-step">
+
+                    <span class="brand-step-number">
+                        05
+                    </span>
+
+                    <strong>
+                        Showcase Your Work
+                    </strong>
+
+                    <span>
+                        Share projects, achievements and learnings.
+                    </span>
+
+                </div>
+
+
+                <div class="brand-step">
+
+                    <span class="brand-step-number">
+                        06
+                    </span>
+
+                    <strong>
+                        Be Consistent
+                    </strong>
+
+                    <span>
+                        Maintain a consistent message, tone and
+                        visual identity across platforms.
+                    </span>
+
+                </div>
+
+
+                <div class="brand-step">
+
+                    <span class="brand-step-number">
+                        07
+                    </span>
+
+                    <strong>
+                        Keep Evolving
+                    </strong>
+
+                    <span>
+                        Seek feedback, learn new skills and update
+                        your profiles regularly.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LINKEDIN PROFESSIONAL IDENTITY -->
+
+        <article class="lesson06-card blue linkedin-professional">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    in
+                </div>
+
+                <div>
+
+                    <h2>
+                        LinkedIn: Your Professional Identity
+                    </h2>
+
+                    <p class="small-label">
+                        CONNECT • SHOWCASE • GROW
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="linkedin-step-list">
+
+
+                <div class="linkedin-step">
+
+                    <span class="linkedin-step-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Create a professional profile photo
+                        </strong>
+
+                        <span>
+                            Use a clear, high-resolution photo.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="linkedin-step">
+
+                    <span class="linkedin-step-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Write a compelling headline
+                        </strong>
+
+                        <span>
+                            Show who you are and what you do.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="linkedin-step">
+
+                    <span class="linkedin-step-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Craft a strong About section
+                        </strong>
+
+                        <span>
+                            Share your story, skills, interests and career goals.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="linkedin-step">
+
+                    <span class="linkedin-step-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Add your education and experience
+                        </strong>
+
+                        <span>
+                            Include university, projects, internships and achievements.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="linkedin-step">
+
+                    <span class="linkedin-step-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Showcase your skills and projects
+                        </strong>
+
+                        <span>
+                            Add relevant skills, certifications and links.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="linkedin-step">
+
+                    <span class="linkedin-step-number">
+                        06
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Grow your network
+                        </strong>
+
+                        <span>
+                            Connect with peers, lecturers and industry professionals.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="linkedin-step">
+
+                    <span class="linkedin-step-number">
+                        07
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Stay active
+                        </strong>
+
+                        <span>
+                            Engage with content, share your learnings and update regularly.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PERSONAL BRAND STATEMENT -->
+
+        <article class="lesson06-card yellow brand-statement">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    ▤
+                </div>
+
+                <div>
+
+                    <h2>
+                        Personal Brand Statement
+                    </h2>
+
+                    <p class="small-label">
+                        A SIMPLE FRAMEWORK
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="statement-row">
+
+                <div class="statement-letter">
+                    I
+                </div>
+
+                <div class="statement-content">
+
+                    <strong>
+                        Who am I?
+                    </strong>
+
+                    <p>
+                        e.g. a passionate Computer Science undergraduate
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="statement-row">
+
+                <div class="statement-letter">
+                    D
+                </div>
+
+                <div class="statement-content">
+
+                    <strong>
+                        What do I do?
+                    </strong>
+
+                    <p>
+                        e.g. develop innovative solutions, focus on
+                        cybersecurity and software development
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="statement-row">
+
+                <div class="statement-letter">
+                    V
+                </div>
+
+                <div class="statement-content">
+
+                    <strong>
+                        What value do I bring?
+                    </strong>
+
+                    <p>
+                        e.g. problem-solving, creativity, dedication
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="statement-row">
+
+                <div class="statement-letter">
+                    G
+                </div>
+
+                <div class="statement-content">
+
+                    <strong>
+                        What are my goals?
+                    </strong>
+
+                    <p>
+                        e.g. to grow in tech, create a positive impact
+                        and keep learning
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- COMMON MISTAKES -->
+
+        <article class="lesson06-card yellow brand-mistakes">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <h2>
+                        Common Mistakes to Avoid
+                    </h2>
+
+                    <p class="small-label">
+                        BE MINDFUL AND DO BETTER
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="mistake-list">
+
+
+                <div class="mistake-row">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Being inconsistent across platforms
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-row">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Using an unprofessional profile or username
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-row">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Not showcasing your achievements
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-row">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Copying others instead of being authentic
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-row">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Having an incomplete LinkedIn profile
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-row">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Focusing only on technical skills
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-row">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Ignoring networking and engagement
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- QUICK TIPS -->
+
+        <article class="lesson06-card lilac brand-tips">
+
+            <div class="lesson06-card-header">
+
+                <div class="lesson06-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h2>
+                        Quick Tips
+                    </h2>
+
+                    <p class="small-label">
+                        SMALL ACTIONS LEAD TO BIG RESULTS
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-tip-list">
+
+
+                <div class="quick-tip">
+
+                    <span class="quick-tip-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Be authentic and true to yourself
+                    </span>
+
+                </div>
+
+
+                <div class="quick-tip">
+
+                    <span class="quick-tip-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Keep your profiles updated
+                    </span>
+
+                </div>
+
+
+                <div class="quick-tip">
+
+                    <span class="quick-tip-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Use a professional and consistent visual style
+                    </span>
+
+                </div>
+
+
+                <div class="quick-tip">
+
+                    <span class="quick-tip-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Share your journey, not just your achievements
+                    </span>
+
+                </div>
+
+
+                <div class="quick-tip">
+
+                    <span class="quick-tip-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Engage with others in your field
+                    </span>
+
+                </div>
+
+
+                <div class="quick-tip">
+
+                    <span class="quick-tip-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Be open to opportunities and collaborations
+                    </span>
+
+                </div>
+
+
+                <div class="quick-tip">
+
+                    <span class="quick-tip-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Remember: your personal brand grows over time
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PERSONAL SECTIONS -->
+
+        <div class="lesson06-side">
+
+
+          
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BOTTOM -->
+
+    <div class="lesson06-bottom">
+
+        <a href="lesson-05.html" class="lesson06-outline">
+            ← PREVIOUS
+        </a>
+
+
+        <a href="lesson-07.html" class="lesson06-complete">
+            COMPLETE LESSON →
+        </a>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>
+        A BETTER ME, ALWAYS
+    </span>
+
+</footer>
+
+
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 07 | Communication Etiquette</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <style>
+
+        
+/* =========================================
+   LESSON 07 – COMMUNICATION ETIQUETTE
+   UPDATED COMPLETE CSS
+   ========================================= */
+
+.lesson07-page {
+    width: 94%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 25px 0 40px;
+}
+
+.lesson07-sheet {
+    background: #fffdf9;
+    min-height: 0;
+    padding: 10px 10px 25px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   TOP NAVIGATION
+   ========================================= */
+
+.lesson07-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.lesson07-back {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.lesson07-back-icon {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #201a17;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.lesson07-page-number {
+    font-size: 12px;
+    letter-spacing: 4px;
+    padding-left: 28px;
+    border-left: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lesson07-page-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #8b8b8b;
+}
+
+.lesson07-page-dot.active {
+    background: #567a9c;
+    border-color: #567a9c;
+}
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.lesson07-heading {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.lesson07-label {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 3px;
+}
+
+.lesson07-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 5.5vw, 78px);
+    line-height: .95;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.lesson07-heading h1 span {
+    color: #567a9c;
+}
+
+.lesson07-subtitle {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 6px;
+}
+
+.lesson07-number {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: #f6e5aa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson07-number strong {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.lesson07-number span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* =========================================
+   PAGE 1 GRID
+   ========================================= */
+
+.lesson07-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(260px, 420px);
+    grid-template-areas:
+        "intro importance image"
+        "telephone telephone image";
+    gap: 12px;
+    align-items: start;
+}
+
+/* Cards */
+
+.lesson07-card {
+    border-radius: 12px;
+    padding: 20px;
+    overflow: hidden;
+    height: fit-content;
+    align-self: start;
+}
+
+.lesson07-card.yellow {
+    background: #f6e5aa;
+}
+
+.lesson07-card.blue {
+    background: #c9dfed;
+}
+
+.lesson07-card.pink {
+    background: #f4d9dc;
+}
+
+.lesson07-card.cream {
+    background: #eee8df;
+}
+
+/* Card headings */
+
+.lesson07-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.lesson07-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border: 3px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.lesson07-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    line-height: 1.15;
+    margin: 3px 0 7px;
+}
+
+.lesson07-card p {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* Explicit page 1 positioning */
+
+.lesson07-grid > article:nth-of-type(1) {
+    grid-area: intro;
+}
+
+.lesson07-grid > article:nth-of-type(2) {
+    grid-area: importance;
+}
+
+.lesson07-grid > article:nth-of-type(3) {
+    grid-area: image;
+}
+
+.telephone-card {
+    grid-area: telephone;
+    grid-column: 1 / 3;
+}
+
+/* =========================================
+   QUOTE
+   ========================================= */
+
+.lesson07-quote {
+    margin-top: 15px;
+    padding: 13px 18px;
+    background: rgba(255,255,255,.48);
+    border-radius: 9px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   LISTS
+   ========================================= */
+
+.lesson07-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.lesson07-list-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.lesson07-number-small {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.lesson07-image-card {
+    background: #f1efeb;
+    padding: 12px;
+    border-radius: 12px;
+    height: 480px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.lesson07-image-area {
+    flex: 1;
+    min-height: 0;
+    border: 1px dashed #999;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.lesson07-image-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   TELEPHONE ETIQUETTE
+   ========================================= */
+
+.telephone-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.telephone-box {
+    background: rgba(255,255,255,.5);
+    border-radius: 9px;
+    padding: 13px;
+}
+
+.telephone-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.telephone-box ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.telephone-box li {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+/* =========================================
+   PAGE 2 – TWO COLUMN LAYOUT
+   ========================================= */
+
+.lesson07-page2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+        "email example"
+        "mistakes comparison";
+    grid-auto-rows: auto;
+    gap: 12px;
+    align-items: start;
+    width: 100%;
+}
+
+/* Individual card positions */
+
+.email-card {
+    grid-area: email;
+}
+
+.email-example-card {
+    grid-area: example;
+}
+
+.mistakes-card {
+    grid-area: mistakes;
+}
+
+.comparison-card {
+    grid-area: comparison;
+}
+
+/* Prevent unused takeaway space */
+
+.takeaway-card {
+    display: none !important;
+}
+
+/* =========================================
+   EMAIL STRUCTURE
+   ========================================= */
+
+.email-structure {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.email-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,.5);
+    padding: 8px 10px;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.email-number {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+/* =========================================
+   EMAIL EXAMPLE
+   ========================================= */
+
+.email-example {
+    background: rgba(255,255,255,.52);
+    border-radius: 9px;
+    padding: 16px;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.email-example strong {
+    color: #4b2e20;
+}
+
+/* =========================================
+   CHECKLIST
+   ========================================= */
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(255,255,255,.5);
+    padding: 7px 9px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================
+   MISTAKES
+   ========================================= */
+
+.mistake-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.mistake-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(255,255,255,.5);
+    padding: 8px 9px;
+    border-radius: 7px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.mistake-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    background: #f4d9dc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* =========================================
+   TELEPHONE VS EMAIL TABLE
+   ========================================= */
+
+.communication-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+    margin-top: 10px;
+}
+
+.communication-table th,
+.communication-table td {
+    padding: 9px;
+    text-align: left;
+    border-radius: 6px;
+    font-size: 11px;
+    vertical-align: top;
+    line-height: 1.45;
+}
+
+.communication-table th {
+    background: rgba(255,255,255,.65);
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+}
+
+.communication-table td {
+    background: rgba(255,255,255,.45);
+}
+
+/* =========================================
+   BOTTOM NAVIGATION
+   ========================================= */
+
+.lesson07-bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.lesson07-outline {
+    border: 1px solid #4b2e20;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.lesson07-complete {
+    background: #4b2e20;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .lesson07-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "intro importance"
+            "image image"
+            "telephone telephone";
+    }
+
+    .lesson07-image-card {
+        height: 350px;
+    }
+
+    .lesson07-page2-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "email example"
+            "mistakes comparison";
+    }
+
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    .lesson07-page {
+        width: 92%;
+        padding-top: 15px;
+    }
+
+    .lesson07-sheet {
+        padding: 8px 5px 20px;
+    }
+
+    .lesson07-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson07-number {
+        display: none;
+    }
+
+    .lesson07-heading h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .lesson07-subtitle {
+        letter-spacing: 3px;
+        font-size: 10px;
+    }
+
+    .lesson07-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "importance"
+            "image"
+            "telephone";
+    }
+
+    .lesson07-image-card {
+        height: 300px;
+    }
+
+    .telephone-card {
+        grid-column: auto;
+    }
+
+    .telephone-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson07-page2-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "email"
+            "example"
+            "mistakes"
+            "comparison";
+    }
+
+    .lesson07-page-number {
+        display: none;
+    }
+
+    .lesson07-bottom {
+        justify-content: center;
+    }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .lesson07-heading h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .lesson07-card {
+        padding: 16px;
+    }
+
+    .lesson07-card h2 {
+        font-size: 21px;
+    }
+
+    .lesson07-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+    }
+
+    .lesson07-bottom {
+        flex-direction: column;
+    }
+
+    .lesson07-outline,
+    .lesson07-complete {
+        text-align: center;
+    }
+
+    .communication-table th,
+    .communication-table td {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     SAME NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+
+  <nav class="nav-links">
+    <a href="../index.html">HOME</a>
+    <a href="../about.html">ABOUT ME</a>
+    <a href="../lessons.html"class="active">LESSONS</a>
+    <a href="../activities.html" >ACTIVITIES</a>
+    <a href="../group-project.html">GROUP PROJECT</a>
+    <a href="../skills.html">SKILLS</a>
+    <a href="../reflection.html">REFLECTION</a>
+</nav>
+
+
+    <a href="../index.html#connect" class="connect-button">
+
+        LET'S CONNECT <span>→</span>
+
+    </a>
+
+</header>
+
+
+
+<main class="lesson07-page">
+
+
+<!-- ==================================================
+     PAGE 1
+=================================================== -->
+
+<section class="lesson07-sheet" id="part1">
+
+
+    <div class="lesson07-top">
+
+        <a href="../lessons.html" class="lesson07-back">
+
+            <span class="lesson07-back-icon">←</span>
+
+            BACK TO LESSONS
+
+        </a>
+
+
+      
+
+    </div>
+
+
+
+    <!-- HEADING -->
+
+    <div class="lesson07-heading">
+
+        <div>
+
+            <p class="lesson07-label">
+                LESSON 07
+            </p>
+
+            <h1>
+                Communication <span>Etiquette</span>
+            </h1>
+
+            <p class="lesson07-subtitle">
+                CONNECT &nbsp; • &nbsp; COMMUNICATE &nbsp; • &nbsp; PROFESSIONALISE
+            </p>
+
+        </div>
+
+
+        <div class="lesson07-number">
+
+            <strong>07</strong>
+
+            <span>LESSON</span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="lesson07-grid">
+
+
+        <!-- WHAT IS COMMUNICATION ETIQUETTE -->
+
+        <article class="lesson07-card yellow">
+
+            <div class="lesson07-card-header">
+
+                <div class="lesson07-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <h2>
+                        What is Communication Etiquette?
+                    </h2>
+
+                    <p>
+                        Communication etiquette refers to the professional
+                        manners and behaviours we use when communicating with
+                        others. It helps us communicate clearly, respectfully
+                        and appropriately in academic and workplace settings.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="lesson07-quote">
+
+                Professional communication is about
+                both what you say and how you say it.
+
+            </div>
+
+        </article>
+
+
+
+        <!-- WHY IMPORTANT -->
+
+        <article class="lesson07-card pink">
+
+            <div class="lesson07-card-header">
+
+                <div class="lesson07-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Why is it Important?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="lesson07-list">
+
+                <div class="lesson07-list-item">
+
+                    <span class="lesson07-number-small">01</span>
+
+                    Creates a professional impression
+
+                </div>
+
+
+                <div class="lesson07-list-item">
+
+                    <span class="lesson07-number-small">02</span>
+
+                    Builds trust and respect
+
+                </div>
+
+
+                <div class="lesson07-list-item">
+
+                    <span class="lesson07-number-small">03</span>
+
+                    Reduces misunderstandings
+
+                </div>
+
+
+                <div class="lesson07-list-item">
+
+                    <span class="lesson07-number-small">04</span>
+
+                    Improves relationships
+
+                </div>
+
+
+                <div class="lesson07-list-item">
+
+                    <span class="lesson07-number-small">05</span>
+
+                    Makes communication more effective
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- IMAGE -->
+
+        <article class="lesson07-image-card">
+
+            <div class="lesson07-image-area">
+
+                <img
+                    src="../assets/images/l7.png"
+                    alt="Communication etiquette"
+                >
+
+            </div>
+
+        </article>
+
+
+
+        <!-- TELEPHONE ETIQUETTE -->
+
+        <article class="lesson07-card blue telephone-card">
+
+            <div class="lesson07-card-header">
+
+                <div class="lesson07-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Telephone Etiquette
+                    </h2>
+
+                    <p>
+                        Telephone etiquette involves using professional,
+                        respectful and effective behaviours when making or
+                        receiving a phone call.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="telephone-columns">
+
+                <div class="telephone-box">
+
+                    <h3>
+                        Before the Call
+                    </h3>
+
+                    <ul>
+
+                        <li>Know the purpose of the call</li>
+
+                        <li>Prepare important information</li>
+
+                        <li>Choose an appropriate time</li>
+
+                        <li>Find a quiet environment</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="telephone-box">
+
+                    <h3>
+                        During the Call
+                    </h3>
+
+                    <ul>
+
+                        <li>Greet the person politely</li>
+
+                        <li>Introduce yourself clearly</li>
+
+                        <li>Speak clearly and confidently</li>
+
+                        <li>Listen without interrupting</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="telephone-box">
+
+                    <h3>
+                        Professional Behaviour
+                    </h3>
+
+                    <ul>
+
+                        <li>Use a respectful tone</li>
+
+                        <li>Stay focused on the conversation</li>
+
+                        <li>Take notes when necessary</li>
+
+                        <li>Clarify important information</li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="telephone-box">
+
+                    <h3>
+                        Ending the Call
+                    </h3>
+
+                    <ul>
+
+                        <li>Summarise important points</li>
+
+                        <li>Confirm the next step</li>
+
+                        <li>Thank the person</li>
+
+                        <li>End the call politely</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 2
+=================================================== -->
+
+
+
+    <div class="lesson07-page2-grid">
+
+
+        <!-- EMAIL ETIQUETTE -->
+
+        <article class="lesson07-card yellow email-card">
+
+            <div class="lesson07-card-header">
+
+                <div class="lesson07-icon">
+                    @
+                </div>
+
+                <div>
+
+                    <h2>
+                        Email Etiquette
+                    </h2>
+
+                    <p>
+                        Email etiquette refers to the professional standards
+                        used when writing, sending and responding to emails.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="email-structure">
+
+                <div class="email-item">
+
+                    <span class="email-number">01</span>
+
+                    <span>
+                        <strong>Subject Line</strong> — Clearly state the purpose
+                    </span>
+
+                </div>
+
+
+                <div class="email-item">
+
+                    <span class="email-number">02</span>
+
+                    <span>
+                        <strong>Greeting</strong> — Use an appropriate greeting
+                    </span>
+
+                </div>
+
+
+                <div class="email-item">
+
+                    <span class="email-number">03</span>
+
+                    <span>
+                        <strong>Opening</strong> — Explain why you are writing
+                    </span>
+
+                </div>
+
+
+                <div class="email-item">
+
+                    <span class="email-number">04</span>
+
+                    <span>
+                        <strong>Main Message</strong> — Keep information clear
+                    </span>
+
+                </div>
+
+
+                <div class="email-item">
+
+                    <span class="email-number">05</span>
+
+                    <span>
+                        <strong>Closing</strong> — End politely and professionally
+                    </span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- EMAIL EXAMPLE -->
+
+        <article class="lesson07-card blue email-example-card">
+
+            <div class="lesson07-card-header">
+
+                <div class="lesson07-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <h2>
+                        Professional Email
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="email-example">
+
+                <strong>Subject:</strong>
+                Request for Assignment Extension
+
+                <br><br>
+
+                Dear Professor,
+
+                <br><br>
+
+                I am writing to kindly request an extension
+                for the assignment due to unforeseen circumstances.
+
+                <br><br>
+
+                I would appreciate your consideration of my request.
+
+                <br><br>
+
+                Kind regards,<br>
+
+                Nicoli Fernando
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KEY TAKEAWAYS -->
+
+       
+                    
+
+
+        <!-- COMMON MISTAKES -->
+
+        <article class="lesson07-card pink mistakes-card">
+
+            <div class="lesson07-card-header">
+
+                <div class="lesson07-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <h2>
+                        Common Mistakes to Avoid
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="mistake-list">
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">×</span>
+
+                    Using informal language in professional situations
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">×</span>
+
+                    Speaking without listening
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">×</span>
+
+                    Sending emails without proofreading
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">×</span>
+
+                    Forgetting attachments
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">×</span>
+
+                    Using an unclear subject line
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">×</span>
+
+                    Responding emotionally or impulsively
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- TELEPHONE VS EMAIL -->
+
+        <article class="lesson07-card blue comparison-card">
+
+            <div class="lesson07-card-header">
+
+                <div class="lesson07-icon">
+                    ↔
+                </div>
+
+                <div>
+
+                    <h2>
+                        Telephone vs Email
+                    </h2>
+
+                    <p>
+                        Choosing the right communication method is also
+                        an important professional skill.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <table class="communication-table">
+
+                <tr>
+
+                    <th>
+                        Telephone
+                    </th>
+
+                    <th>
+                        Email
+                    </th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Immediate communication
+                    </td>
+
+                    <td>
+                        Asynchronous communication
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Useful for urgent matters
+                    </td>
+
+                    <td>
+                        Useful for detailed information
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Allows immediate clarification
+                    </td>
+
+                    <td>
+                        Creates a written record
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Tone of voice matters
+                    </td>
+
+                    <td>
+                        Written tone matters
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- BOTTOM NAV -->
+
+    <div class="lesson07-bottom">
+
+        <a href="lesson-06.html" class="lesson07-outline">
+            ← PREVIOUS
+        </a>
+
+
+        <a href="lesson-08.html" class="lesson07-complete">
+            COMPLETE LESSON →
+        </a>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     SAME FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>
+        A BETTER ME, ALWAYS
+    </span>
+
+</footer>
+
+
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

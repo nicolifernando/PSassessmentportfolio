@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 03 | Interview Ready</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<style>
+/* GENERAL */
+.lesson03-page,
+.lesson03-page * {
+    box-sizing: border-box;
+}
+
+.lesson03-page {
+    width: 94%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 20px 0 35px;
+    overflow-x: clip;
+}
+
+.lesson03-sheet {
+    background: #fffdf9;
+    padding: 12px;
+    margin-bottom: 18px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.lesson03-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.lesson03-back {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #201a17;
+    text-decoration: none;
+}
+
+.lesson03-back-icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #201a17;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+/* HEADING */
+.lesson03-heading {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 90px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.lesson03-label {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 4px;
+}
+
+.lesson03-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px,5.5vw,76px);
+    line-height: .95;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.lesson03-heading h1 span {
+    color: #567a9c;
+}
+
+.lesson03-subtitle {
+    margin-top: 12px;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.lesson03-number {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: #f6e5aa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson03-number strong {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+}
+
+.lesson03-number span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* CARDS */
+.lesson03-card {
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.lesson03-card.yellow { background: #f6e5aa; }
+.lesson03-card.blue { background: #c9dfed; }
+.lesson03-card.pink { background: #f4d9dc; }
+.lesson03-card.cream { background: #eee8df; }
+
+.lesson03-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 9px;
+}
+
+.lesson03-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border: 3px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.lesson03-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    line-height: 1.15;
+    margin: 3px 0 6px;
+    overflow-wrap: break-word;
+}
+
+.lesson03-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+.lesson03-card p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* PAGE 1 GRID */
+.lesson03-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr)
+        minmax(0,.85fr);
+    grid-template-areas:
+        "definition strategy image"
+        "communication communication listening"
+        "success sixc sixc"
+        "language language language";
+    gap: 11px;
+    align-items: start;
+}
+
+.interview-definition { grid-area: definition; }
+.interview-strategy { grid-area: strategy; }
+.lesson03-image-card { grid-area: image; }
+.interview-communication { grid-area: communication; }
+.interview-listening { grid-area: listening; }
+.interview-success { grid-area: success; }
+.interview-sixc { grid-area: sixc; }
+.interview-language { grid-area: language; }
+
+/* IMAGE FIX */
+.lesson03-image-card {
+    background: #f1efeb;
+    padding: 9px;
+    border-radius: 10px;
+    height: 280px;
+    min-height: 0;
+    max-height: 280px;
+    align-self: start;
+    overflow: hidden;
+}
+
+.lesson03-image-area {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 1px dashed #999;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lesson03-image-area img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* QUESTION BOXES */
+.lesson03-list {
+    padding-left: 18px;
+    margin: 7px 0 0;
+}
+
+.lesson03-list li {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.question-box {
+    background: rgba(255,255,255,.55);
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.question-box strong {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+}
+
+.question-box p {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+/* COMMUNICATION */
+.communication-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 10px;
+}
+
+.communication-box {
+    background: rgba(255,255,255,.55);
+    border-radius: 8px;
+    padding: 12px;
+    min-width: 0;
+}
+
+.communication-box h3 {
+    font-size: 17px;
+}
+
+.communication-box ul {
+    padding-left: 17px;
+    margin-top: 7px;
+}
+
+.communication-box li {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.communication-stat {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.stat-box {
+    background: rgba(255,255,255,.6);
+    border-radius: 7px;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.stat-box strong {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    display: block;
+}
+
+.stat-box span {
+    font-size: 10px;
+}
+
+/* CANDIDATE LIST */
+.candidate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.candidate-item {
+    background: rgba(255,255,255,.55);
+    padding: 8px;
+    border-radius: 7px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 0;
+}
+
+.candidate-item span {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.candidate-icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.8);
+}
+
+/* SIX C'S */
+.sixc-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 7px;
+}
+
+.sixc-item {
+    background: rgba(255,255,255,.55);
+    padding: 9px;
+    border-radius: 7px;
+    min-width: 0;
+}
+
+.sixc-item strong {
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+}
+
+.sixc-item p {
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+/* LANGUAGE SUPPORT */
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 8px;
+}
+
+.language-item {
+    background: rgba(255,255,255,.55);
+    border-radius: 7px;
+    padding: 10px;
+    min-width: 0;
+}
+
+.language-item h3 {
+    font-size: 14px;
+}
+
+.language-item p {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* PAGE 2 GRID */
+.lesson03-page2-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-areas:
+        "structure star"
+        "questions questions"
+        "preparation attire"
+        "mock mock";
+    gap: 11px;
+    align-items: start;
+    min-width: 0;
+}
+
+.interview-structure { grid-area: structure; }
+.star-card { grid-area: star; }
+.interview-questions { grid-area: questions; }
+.interview-preparation { grid-area: preparation; }
+.interview-attire { grid-area: attire; }
+.mock-interview { grid-area: mock; }
+
+/* INTERVIEW STRUCTURE */
+.structure-list {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 7px;
+}
+
+.structure-item {
+    background: rgba(255,255,255,.55);
+    border-radius: 7px;
+    padding: 10px;
+    min-width: 0;
+}
+
+.structure-item strong {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+}
+
+.structure-item p {
+    font-size: 11px;
+    margin-top: 4px;
+}
+.interview-structure {
+    margin-top: 50px;
+}
+
+/* STAR METHOD */
+.star-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 7px;
+}
+
+.star-box {
+    padding: 12px 8px;
+    border-radius: 8px;
+    text-align: center;
+    min-height: 125px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.star-box:nth-child(1) { background: #f4d9dc; }
+.star-box:nth-child(2) { background: #e7dafa; }
+.star-box:nth-child(3) { background: #c9dfed; }
+.star-box:nth-child(4) { background: #f6e5aa; }
+
+.star-letter {
+    font-family: "Playfair Display", serif;
+    font-size: 29px;
+}
+
+.star-box h3 {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.star-box p {
+    font-size: 10px;
+}
+
+.example-answer {
+    background: rgba(255,255,255,.6);
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.example-answer strong {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+}
+
+.example-answer p {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-top: 6px;
+}
+
+/* COMMON QUESTIONS */
+.question-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 7px;
+}
+
+.question-item {
+    background: rgba(255,255,255,.55);
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 11px;
+    line-height: 1.4;
+    min-width: 0;
+}
+
+.question-item strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+/* PREPARATION AND ATTIRE */
+.preparation-list,
+.attire-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.preparation-item,
+.attire-item {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    background: rgba(255,255,255,.55);
+    border-radius: 7px;
+    padding: 8px;
+    min-width: 0;
+}
+
+.preparation-item span:last-child,
+.attire-item span:last-child {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.prep-number {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+}
+
+.attire-image {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* MOCK INTERVIEWS */
+.mock-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 10px;
+}
+
+.mock-box {
+    background: rgba(255,255,255,.55);
+    border-radius: 8px;
+    padding: 12px;
+    min-width: 0;
+}
+
+.mock-box h3 {
+    font-size: 16px;
+}
+
+.mock-box p {
+    font-size: 11px;
+}
+
+/* BOTTOM NAVIGATION */
+.lesson03-bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.lesson03-outline {
+    border: 1px solid #4b2e20;
+    color: #4b2e20;
+    padding: 12px 23px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.lesson03-complete {
+    background: #4b2e20;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE FIXES */
+.lesson03-grid > *,
+.lesson03-page2-grid > *,
+.lesson03-card,
+.communication-box,
+.sixc-item,
+.language-item,
+.structure-item,
+.star-box,
+.question-item,
+.preparation-item,
+.attire-item,
+.mock-box {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+.interview-definition {
+    margin-top: 70px;
+}
+.interview-sixc {
+    margin-top: 50px;
+}
+
+
+/* TABLET */
+@media (max-width: 1050px) {
+    .lesson03-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-areas:
+            "definition strategy"
+            "image image"
+            "communication communication"
+            "listening success"
+            "sixc sixc"
+            "language language";
+    }
+
+    .lesson03-image-card {
+        height: 300px;
+        max-height: 300px;
+    }
+
+    .lesson03-page2-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+        grid-template-areas:
+            "structure star"
+            "questions questions"
+            "preparation attire"
+            "mock mock";
+    }
+
+    .star-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 750px) {
+    .lesson03-page {
+        width: 94%;
+    }
+
+    .lesson03-sheet {
+        padding: 10px;
+    }
+
+    .lesson03-heading {
+        grid-template-columns: minmax(0,1fr);
+    }
+
+    .lesson03-number {
+        display: none;
+    }
+
+    .lesson03-heading h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .lesson03-subtitle {
+        font-size: 10px;
+        letter-spacing: 2px;
+        line-height: 1.6;
+    }
+
+    .lesson03-grid {
+        grid-template-columns: minmax(0,1fr);
+        grid-template-areas:
+            "definition"
+            "strategy"
+            "image"
+            "communication"
+            "listening"
+            "success"
+            "sixc"
+            "language";
+    }
+
+    .lesson03-page2-grid {
+        grid-template-columns: minmax(0,1fr);
+        grid-template-areas:
+            "structure"
+            "star"
+            "questions"
+            "preparation"
+            "attire"
+            "mock";
+    }
+
+    .lesson03-image-card {
+        height: 280px;
+        max-height: 280px;
+    }
+
+    .communication-grid,
+    .language-grid,
+    .mock-grid {
+        grid-template-columns: minmax(0,1fr);
+    }
+
+    .sixc-grid,
+    .question-grid,
+    .structure-list,
+    .star-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+
+    .lesson03-bottom {
+        justify-content: center;
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 500px) {
+    .lesson03-page {
+        width: 94%;
+    }
+
+    .lesson03-sheet {
+        padding: 8px;
+    }
+
+    .lesson03-heading h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .lesson03-card {
+        padding: 14px;
+    }
+
+    .lesson03-card h2 {
+        font-size: 19px;
+    }
+
+    .lesson03-card-header {
+        gap: 9px;
+    }
+
+    .lesson03-icon {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 18px;
+    }
+
+    .lesson03-subtitle {
+        letter-spacing: 1px;
+    }
+
+    .sixc-grid,
+    .question-grid,
+    .structure-list,
+    .star-grid {
+        grid-template-columns: minmax(0,1fr);
+    }
+
+    .communication-stat {
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+
+    .lesson03-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .lesson03-outline,
+    .lesson03-complete {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="../index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">HOME</a>
+        <a href="../about.html">ABOUT ME</a>
+        <a href="../lessons.html" class="active">LESSONS</a>
+        <a href="../activities.html">ACTIVITIES</a>
+        <a href="../group-project.html">GROUP PROJECT</a>
+        <a href="../skills.html">SKILLS</a>
+        <a href="../reflection.html">REFLECTION</a>
+    </nav>
+
+    <a href="../index.html#connect" class="connect-button">
+        LET'S CONNECT <span>→</span>
+    </a>
+</header>
+
+<main class="lesson03-page">
+
+<!-- PAGE 1 -->
+<section class="lesson03-sheet" id="part1">
+
+    <div class="lesson03-top">
+        <a href="../lessons.html" class="lesson03-back">
+            <span class="lesson03-back-icon">←</span>
+            BACK TO LESSONS
+        </a>
+    </div>
+
+    <div class="lesson03-heading">
+        <div>
+            <p class="lesson03-label">LESSON 03</p>
+            <h1>Interview <span>Ready</span></h1>
+            <p class="lesson03-subtitle">
+                PREPARE &nbsp; • &nbsp; COMMUNICATE &nbsp; • &nbsp; IMPRESS
+            </p>
+        </div>
+
+        <div class="lesson03-number">
+            <strong>03</strong>
+            <span>LESSON</span>
+        </div>
+    </div>
+
+    <div class="lesson03-grid">
+
+        <!-- WHAT IS AN INTERVIEW -->
+        <article class="lesson03-card yellow interview-definition">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">♧</div>
+                <div>
+                    <h2>What is a Job Interview?</h2>
+                    <p>
+                        A job interview is a conversation between
+                        a job applicant and a representative of an
+                        organisation that is looking to hire.
+                        Both parties exchange information and
+                        evidence to determine whether the job
+                        is a suitable match.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- INTERVIEW STRATEGY -->
+        <article class="lesson03-card pink interview-strategy">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">◎</div>
+                <div>
+                    <h2>Develop Your Interview Strategy</h2>
+                </div>
+            </div>
+
+            <p>
+                Prepare yourself by answering three important questions:
+            </p>
+
+            <div class="question-box">
+                <strong>01. What do I want?</strong>
+                <p>What should the interviewer know about me?</p>
+            </div>
+
+            <div class="question-box">
+                <strong>02. What should I improve?</strong>
+                <p>What weaknesses or disadvantages should I minimise?</p>
+            </div>
+
+            <div class="question-box">
+                <strong>03. What do I need to know?</strong>
+                <p>What should I learn about the job and organisation?</p>
+            </div>
+        </article>
+
+        <!-- IMAGE -->
+        <article class="lesson03-image-card">
+            <div class="lesson03-image-area">
+                <img src="../assets/images/l3.png" alt="Job interview">
+            </div>
+        </article>
+
+        <!-- COMMUNICATION -->
+        <article class="lesson03-card blue interview-communication">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">◇</div>
+                <div>
+                    <h2>The Role of Effective Communication</h2>
+                    <p>
+                        Communication skills are essential because
+                        your responses and behaviour demonstrate
+                        your attitude, personality and professionalism.
+                    </p>
+                </div>
+            </div>
+
+            <div class="communication-grid">
+                <div class="communication-box">
+                    <h3>Verbal Communication</h3>
+                    <ul>
+                        <li>Speak clearly and confidently.</li>
+                        <li>Use industry terms and technical vocabulary.</li>
+                        <li>Provide specific answers and examples.</li>
+                        <li>Respond positively to changes in topics.</li>
+                        <li>Ask questions where appropriate.</li>
+                        <li>Show enthusiasm when discussing the role.</li>
+                    </ul>
+                </div>
+
+                <div class="communication-box">
+                    <h3>Non-Verbal Communication</h3>
+                    <ul>
+                        <li>Smile and greet the interviewer.</li>
+                        <li>Maintain comfortable eye contact.</li>
+                        <li>Sit firmly and maintain good posture.</li>
+                        <li>Show confidence through body language.</li>
+                        <li>Pay attention to the interviewer's cues.</li>
+                        <li>Demonstrate enthusiasm and interest.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="margin-top:10px;font-weight:600;">
+                The 7–38–55 Communication Model
+            </p>
+
+            <div class="communication-stat">
+                <div class="stat-box">
+                    <strong>7%</strong>
+                    <span>Words</span>
+                </div>
+                <div class="stat-box">
+                    <strong>38%</strong>
+                    <span>Tone of Voice</span>
+                </div>
+                <div class="stat-box">
+                    <strong>55%</strong>
+                    <span>Body Language</span>
+                </div>
+            </div>
+
+            <p style="font-size:10px;margin-top:7px;">
+                According to the lecture, these figures illustrate
+                the importance of non-verbal communication.
+            </p>
+        </article>
+
+        <!-- ACTIVE LISTENING -->
+        <article class="lesson03-card yellow interview-listening">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">♫</div>
+                <div>
+                    <h2>Active Listening</h2>
+                </div>
+            </div>
+
+            <p>
+                Listening carefully helps you understand questions,
+                respond appropriately and build better communication.
+            </p>
+
+            <div class="candidate-list">
+                <div class="candidate-item">
+                    <span class="candidate-icon">01</span>
+                    <span>Pay attention.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">02</span>
+                    <span>Show that you are listening.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">03</span>
+                    <span>Seek clarification when necessary.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">04</span>
+                    <span>Defer judgement.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">05</span>
+                    <span>Respond appropriately.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- SUCCESSFUL VS UNSUCCESSFUL -->
+        <article class="lesson03-card pink interview-success">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">✓</div>
+                <div>
+                    <h2>Successful vs Unsuccessful Candidates</h2>
+                </div>
+            </div>
+
+            <div class="candidate-list">
+                <div class="candidate-item">
+                    <span class="candidate-icon">✓</span>
+                    <span><strong>Successful:</strong> Specific and consistent answers.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">✓</span>
+                    <span><strong>Successful:</strong> Researched the company.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">✓</span>
+                    <span><strong>Successful:</strong> Maintained eye contact and smiled.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">✓</span>
+                    <span><strong>Successful:</strong> Used examples and technical terms.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">×</span>
+                    <span><strong>Unsuccessful:</strong> Gave vague and short answers.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">×</span>
+                    <span><strong>Unsuccessful:</strong> Showed little eye contact.</span>
+                </div>
+                <div class="candidate-item">
+                    <span class="candidate-icon">×</span>
+                    <span><strong>Unsuccessful:</strong> Asked very few questions.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 6 C'S -->
+        <article class="lesson03-card cream interview-sixc">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">✦</div>
+                <div>
+                    <h2>The 6 C's of Effective Communication</h2>
+                    <p>
+                        Apply these principles to make your answers
+                        professional and effective.
+                    </p>
+                </div>
+            </div>
+
+            <div class="sixc-grid">
+                <div class="sixc-item">
+                    <strong>01. Clear</strong>
+                    <p>Present information in an understandable way.</p>
+                </div>
+                <div class="sixc-item">
+                    <strong>02. Concise</strong>
+                    <p>Keep answers focused without unnecessary details.</p>
+                </div>
+                <div class="sixc-item">
+                    <strong>03. Correct</strong>
+                    <p>Provide accurate and truthful information.</p>
+                </div>
+                <div class="sixc-item">
+                    <strong>04. Complete</strong>
+                    <p>Include all the necessary information.</p>
+                </div>
+                <div class="sixc-item">
+                    <strong>05. Concrete</strong>
+                    <p>Support your answers with examples and evidence.</p>
+                </div>
+                <div class="sixc-item">
+                    <strong>06. Courteous</strong>
+                    <p>Always communicate politely and respectfully.</p>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <strong>Remember: Confidence matters too!</strong>
+                <p>
+                    Demonstrate a confident tone and a positive
+                    "can-do" attitude.
+                </p>
+            </div>
+        </article>
+
+        <!-- LANGUAGE SUPPORT -->
+        <article class="lesson03-card blue interview-language">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">Aa</div>
+                <div>
+                    <h2>Language Support for Interviews</h2>
+                    <p>
+                        Use appropriate language structures to
+                        express yourself professionally.
+                    </p>
+                </div>
+            </div>
+
+            <div class="language-grid">
+                <div class="language-item">
+                    <h3>Personality</h3>
+                    <p>
+                        Use descriptive adjectives such as
+                        adaptable, creative, reliable, innovative,
+                        motivated and trustworthy.
+                    </p>
+                </div>
+
+                <div class="language-item">
+                    <h3>Strengths</h3>
+                    <p>
+                        "I'm good at meeting deadlines."
+                        <br>
+                        "My main strength is communication."
+                        <br>
+                        "I am passionate about..."
+                    </p>
+                </div>
+
+                <div class="language-item">
+                    <h3>Education</h3>
+                    <p>
+                        "I have completed..."
+                        <br>
+                        "I have studied..."
+                        <br>
+                        "I recently graduated from..."
+                    </p>
+                </div>
+
+                <div class="language-item">
+                    <h3>Work Experience</h3>
+                    <p>
+                        "I have experience as..."
+                        <br>
+                        "I worked in..."
+                        <br>
+                        "At university, I volunteered as..."
+                    </p>
+                </div>
+
+                <div class="language-item">
+                    <h3>Future Goals</h3>
+                    <p>
+                        "I am looking to further my skills in..."
+                        <br>
+                        "I want to develop my career in..."
+                    </p>
+                </div>
+
+                <div class="language-item">
+                    <h3>Giving Opinions</h3>
+                    <p>
+                        "In my opinion..."
+                        <br>
+                        "From my point of view..."
+                        <br>
+                        "I strongly believe that..."
+                    </p>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="lesson03-sheet" id="part2">
+
+    <div class="lesson03-page2-grid">
+
+        <!-- INTERVIEW STRUCTURE -->
+        <article class="lesson03-card yellow interview-structure">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">▤</div>
+                <div>
+                    <h2>Structure of an Interview</h2>
+                    <p>A typical interview follows four main stages.</p>
+                </div>
+            </div>
+
+            <div class="structure-list">
+                <div class="structure-item">
+                    <strong>01. Introduction</strong>
+                    <p>Greetings, introductions and initial conversation.</p>
+                </div>
+                <div class="structure-item">
+                    <strong>02. Evidence-Speaking</strong>
+                    <p>Discuss your qualifications, skills and experiences.</p>
+                </div>
+                <div class="structure-item">
+                    <strong>03. Your Questions</strong>
+                    <p>
+                        Ask relevant questions about the position
+                        and organisation.
+                    </p>
+                </div>
+                <div class="structure-item">
+                    <strong>04. Closure</strong>
+                    <p>End the interview politely and professionally.</p>
+                </div>
+            </div>
+        </article>
+
+        <!-- STAR METHOD -->
+        <article class="lesson03-card cream star-card">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">☆</div>
+                <div>
+                    <h2>The STAR Method</h2>
+                    <p>A useful technique for structuring interview answers.</p>
+                </div>
+            </div>
+
+            <div class="star-grid">
+                <div class="star-box">
+                    <div class="star-letter">S</div>
+                    <h3>Situation</h3>
+                    <p>Describe the situation and background.</p>
+                </div>
+                <div class="star-box">
+                    <div class="star-letter">T</div>
+                    <h3>Task</h3>
+                    <p>Explain what you needed to achieve.</p>
+                </div>
+                <div class="star-box">
+                    <div class="star-letter">A</div>
+                    <h3>Action</h3>
+                    <p>Describe the actions you personally took.</p>
+                </div>
+                <div class="star-box">
+                    <div class="star-letter">R</div>
+                    <h3>Result</h3>
+                    <p>Explain the outcome of your actions.</p>
+                </div>
+            </div>
+
+            <div class="example-answer">
+                <strong>Example Interview Question</strong>
+                <p>
+                    Tell us about a challenge you faced and how
+                    you handled it.
+                </p>
+                <p>
+                    <strong>Situation:</strong> A team was behind schedule
+                    on an important project.
+                </p>
+                <p>
+                    <strong>Task:</strong> The project needed to be
+                    completed before the deadline.
+                </p>
+                <p>
+                    <strong>Action:</strong> Tasks were delegated
+                    according to team members' strengths and
+                    responsibilities were reorganised.
+                </p>
+                <p>
+                    <strong>Result:</strong> The project was completed
+                    on time and the experience improved leadership skills.
+                </p>
+            </div>
+        </article>
+
+        <!-- COMMON QUESTIONS -->
+        <article class="lesson03-card pink interview-questions">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">?</div>
+                <div>
+                    <h2>Common Interview Questions</h2>
+                    <p>
+                        Practise answering these questions using
+                        clear examples and relevant evidence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="question-grid">
+                <div class="question-item">
+                    <strong>01</strong>
+                    Tell me about yourself.
+                </div>
+                <div class="question-item">
+                    <strong>02</strong>
+                    What are your strengths?
+                </div>
+                <div class="question-item">
+                    <strong>03</strong>
+                    What are your weaknesses?
+                </div>
+                <div class="question-item">
+                    <strong>04</strong>
+                    Why do you want this job?
+                </div>
+                <div class="question-item">
+                    <strong>05</strong>
+                    Tell us about a challenge you faced.
+                </div>
+                <div class="question-item">
+                    <strong>06</strong>
+                    What are your future career goals?
+                </div>
+            </div>
+        </article>
+
+        <!-- INTERVIEW PREPARATION -->
+        <article class="lesson03-card blue interview-preparation">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">✓</div>
+                <div>
+                    <h2>Before the Interview</h2>
+                    <p>Pay attention to these important practical details.</p>
+                </div>
+            </div>
+
+            <div class="preparation-list">
+                <div class="preparation-item">
+                    <span class="prep-number">01</span>
+                    <span><strong>What to wear:</strong> Choose appropriate and professional attire.</span>
+                </div>
+                <div class="preparation-item">
+                    <span class="prep-number">02</span>
+                    <span><strong>What to take:</strong> Prepare your CV, certificates and required documents.</span>
+                </div>
+                <div class="preparation-item">
+                    <span class="prep-number">03</span>
+                    <span><strong>What to note:</strong> Prepare important information and questions.</span>
+                </div>
+                <div class="preparation-item">
+                    <span class="prep-number">04</span>
+                    <span><strong>How to get there:</strong> Plan your route and arrive on time.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- INTERVIEW ATTIRE -->
+        <article class="lesson03-card yellow interview-attire">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">♙</div>
+                <div>
+                    <h2>Professional Interview Attire</h2>
+                    <p>
+                        Your appearance contributes to the
+                        professional impression you create.
+                    </p>
+                </div>
+            </div>
+
+            <div class="attire-item">
+                <span class="candidate-icon">✓</span>
+                <span>Wear clean, neat and well-fitted clothing.</span>
+            </div>
+            <div class="attire-item">
+                <span class="candidate-icon">✓</span>
+                <span>Choose business casual or business professional attire.</span>
+            </div>
+            <div class="attire-item">
+                <span class="candidate-icon">✓</span>
+                <span>Keep accessories simple and appropriate.</span>
+            </div>
+            <div class="attire-item">
+                <span class="candidate-icon">✓</span>
+                <span>Ensure your hair and shoes are well-groomed.</span>
+            </div>
+            <div class="attire-item">
+                <span class="candidate-icon">×</span>
+                <span>Avoid overly casual, distracting or untidy clothing.</span>
+            </div>
+        </article>
+
+        <!-- MOCK INTERVIEWS -->
+        <article class="lesson03-card cream mock-interview">
+            <div class="lesson03-card-header">
+                <div class="lesson03-icon">✦</div>
+                <div>
+                    <h2>Mock Interviews</h2>
+                    <p>Practise before the real interview!</p>
+                </div>
+            </div>
+
+            <div class="mock-grid">
+                <div class="mock-box">
+                    <h3>What is a Mock Interview?</h3>
+                    <p>
+                        A mock interview is a practice interview
+                        designed to simulate a real job interview.
+                        It allows candidates to practise answering
+                        questions and improve their communication
+                        and presentation skills.
+                    </p>
+                </div>
+
+                <div class="mock-box">
+                    <h3>Why are They Useful?</h3>
+                    <p>
+                        They help you become more confident,
+                        identify areas for improvement, practise
+                        the STAR method and become familiar
+                        with the interview environment.
+                    </p>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- BOTTOM NAVIGATION -->
+    <div class="lesson03-bottom">
+        <a href="lesson-02.html" class="lesson03-outline">
+            ← PREVIOUS
+        </a>
+
+        <a href="lesson-04.html" class="lesson03-complete">
+            COMPLETE LESSON →
+        </a>
+    </div>
+
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>
+        A BETTER ME, ALWAYS
+    </span>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

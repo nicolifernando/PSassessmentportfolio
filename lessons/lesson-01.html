@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 01 | Professional Foundations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+
+* {
+    box-sizing: border-box;
+}
+
+.lesson01-page {
+    width: 94%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 24px 0 45px;
+}
+
+.lesson01-sheet {
+    background: #fffdf9;
+    padding: 12px 10px 28px;
+    margin-bottom: 24px;
+}
+
+/* TOP NAVIGATION */
+
+.lesson01-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.lesson01-back {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.lesson01-back-icon {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #201a17;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* LESSON HEADING */
+
+.lesson01-heading {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.lesson01-label {
+    font-size: 12px;
+    letter-spacing: 6px;
+    margin-bottom: 3px;
+}
+
+.lesson01-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 5.5vw, 78px);
+    line-height: .95;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.lesson01-heading h1 span {
+    color: #567a9c;
+}
+
+.lesson01-subtitle {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 6px;
+}
+
+.lesson01-number {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: #f6e5aa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson01-number strong {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.lesson01-number span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* PAGE 1 – MAIN GRID */
+
+.lesson01-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr)
+        minmax(260px, .82fr);
+
+    grid-template-areas:
+        "intro importance image"
+        "types types skills";
+
+    gap: 14px;
+    align-items: start;
+}
+
+.lesson01-grid > article:nth-of-type(1) {
+    grid-area: intro;
+}
+
+.lesson01-grid > article:nth-of-type(2) {
+    grid-area: importance;
+}
+
+.lesson01-grid > article:nth-of-type(3) {
+    grid-area: image;
+}
+
+.lesson01-grid > article:nth-of-type(4) {
+    grid-area: types;
+}
+
+.lesson01-grid > article:nth-of-type(5) {
+    grid-area: skills;
+}
+
+/* GENERAL CARDS */
+
+.lesson01-card {
+    border-radius: 12px;
+    padding: 20px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.lesson01-card.yellow {
+    background: #f6e5aa;
+}
+
+.lesson01-card.blue {
+    background: #c9dfed;
+}
+
+.lesson01-card.cream {
+    background: #eee8df;
+}
+
+.lesson01-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.lesson01-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border: 3px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.lesson01-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    line-height: 1.12;
+    margin: 3px 0 8px;
+}
+
+.lesson01-card p {
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.lesson01-quote {
+    margin-top: 15px;
+    padding: 13px 16px;
+    background: rgba(255,255,255,.48);
+    border-radius: 9px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* IMPORTANCE LIST */
+
+.importance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.importance-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.importance-number {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+/* TYPES OF PROFESSIONAL SKILLS */
+
+.types-intro {
+    margin: 3px 0 12px 62px;
+}
+
+.types-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.type-box {
+    background: rgba(255,255,255,.5);
+    border-radius: 9px;
+    padding: 14px;
+}
+
+.type-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.type-box p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.type-box strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+/* KEY PROFESSIONAL SKILLS */
+
+.skills-list {
+    margin: 10px 0 0 4px;
+    padding-left: 18px;
+    columns: 1;
+}
+
+.skills-list li {
+    font-size: 12px;
+    line-height: 1.55;
+    margin-bottom: 3px;
+    break-inside: avoid;
+}
+
+/* MAIN IMAGE */
+
+.lesson01-image-card {
+    background: #f1efeb;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    height: 390px;
+    min-height: 0;
+    align-self: start;
+}
+
+.lesson01-image-area {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 1px dashed #999;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex: 1;
+}
+
+.lesson01-image-area img {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    display: block;
+}
+
+/* PAGE 2 */
+
+.page2-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+        "examples development"
+        "application application";
+    gap: 14px;
+    align-items: start;
+}
+
+.examples-card {
+    grid-area: examples;
+}
+
+.development-card {
+    grid-area: development;
+}
+
+.application-card {
+    grid-area: application;
+}
+
+/* EXAMPLES */
+
+.example-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.example-item {
+    background: rgba(255,255,255,.55);
+    border-radius: 8px;
+    padding: 9px 11px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.example-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.7);
+    font-size: 17px;
+}
+
+.example-item strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.example-item span {
+    display: block;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* DEVELOPMENT LIST */
+
+.development-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.development-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,.5);
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.development-number {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
+.development-item span {
+    font-size: 12px;
+}
+
+/* MY APPLICATION */
+
+.application-card {
+    padding: 16px 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.takeaway-subtitle {
+    font-size: 9px;
+    letter-spacing: 4px;
+    margin: 3px 0 0;
+}
+
+.application-image {
+    width: 65%;
+    height: 300px;
+    margin: 15px auto 0;
+    border: 1px dashed #888;
+    border-radius: 9px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.25);
+}
+
+.application-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* BOTTOM NAVIGATION */
+
+.lesson01-bottom {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.lesson01-outline {
+    border: 1px solid #4b2e20;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.lesson01-complete {
+    background: #4b2e20;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+    .lesson01-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "intro importance"
+            "image image"
+            "types skills";
+    }
+
+    .lesson01-image-card {
+        height: 350px;
+    }
+
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 750px) {
+
+    .lesson01-page {
+        width: 92%;
+    }
+
+    .lesson01-heading {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson01-number {
+        display: none;
+    }
+
+    .lesson01-heading h1 {
+        font-size: 48px;
+    }
+
+    .lesson01-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "importance"
+            "image"
+            "types"
+            "skills";
+    }
+
+    .lesson01-image-card {
+        height: 300px;
+    }
+
+    .page2-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "examples"
+            "development"
+            "application";
+    }
+
+    .application-card {
+        width: 100%;
+    }
+
+    .application-image {
+        width: 100%;
+        height: 240px;
+    }
+
+    .types-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .types-intro {
+        margin-left: 0;
+    }
+
+    .lesson01-bottom {
+        justify-content: center;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 500px) {
+
+    .lesson01-heading h1 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .lesson01-card {
+        padding: 16px;
+    }
+
+    .lesson01-card h2 {
+        font-size: 21px;
+    }
+
+    .lesson01-subtitle {
+        letter-spacing: 3px;
+    }
+
+    .lesson01-bottom {
+        flex-direction: column;
+    }
+
+    .lesson01-outline,
+    .lesson01-complete {
+        text-align: center;
+    }
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="../index.html">HOME</a>
+        <a href="../about.html">ABOUT ME</a>
+        <a href="../lessons.html" class="active">LESSONS</a>
+        <a href="../activities.html">ACTIVITIES</a>
+        <a href="../group-project.html">GROUP PROJECT</a>
+        <a href="../skills.html">SKILLS</a>
+        <a href="../reflection.html">REFLECTION</a>
+    </nav>
+
+    <a href="../index.html#connect" class="connect-button">
+        LET'S CONNECT <span>→</span>
+    </a>
+
+</header>
+
+
+<main class="lesson01-page">
+
+    <!-- PAGE 1 -->
+
+    <section class="lesson01-sheet" id="part1">
+
+        <div class="lesson01-top">
+
+            <a href="../lessons.html" class="lesson01-back">
+                <span class="lesson01-back-icon">←</span>
+                BACK TO LESSONS
+            </a>
+
+        </div>
+
+        <div class="lesson01-heading">
+
+            <div>
+
+                <p class="lesson01-label">
+                    LESSON 01
+                </p>
+
+                <h1>
+                    Professional <span>Foundations</span>
+                </h1>
+
+                <p class="lesson01-subtitle">
+                    UNDERSTAND &nbsp; • &nbsp; EXPLORE &nbsp; • &nbsp; BUILD
+                </p>
+
+            </div>
+
+            <div class="lesson01-number">
+                <strong>01</strong>
+                <span>LESSON</span>
+            </div>
+
+        </div>
+
+
+        <div class="lesson01-grid">
+
+            <!-- PROFESSIONAL SKILLS -->
+
+            <article class="lesson01-card yellow">
+
+                <div class="lesson01-card-header">
+
+                    <div class="lesson01-icon">
+                        ♧
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            What are Professional Skills?
+                        </h2>
+
+                        <p>
+                            Professional skills, also known as soft skills
+                            or employability skills, are the non-technical
+                            interpersonal abilities needed for success in
+                            the workplace. They complement technical
+                            knowledge and can be transferred across
+                            different roles and industries.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="lesson01-quote">
+                    Professional skills help turn knowledge into effective
+                    workplace performance.
+                </div>
+
+                <p style="margin-top:12px;">
+                    Develop these skills through continuous learning,
+                    practice, feedback and embracing new challenges.
+                </p>
+
+            </article>
+
+
+            <!-- IMPORTANCE OF PROFESSIONAL SKILLS -->
+
+            <article class="lesson01-card blue">
+
+                <div class="lesson01-card-header">
+
+                    <div class="lesson01-icon">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Importance of Professional Skills
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div class="importance-list">
+
+                    <div class="importance-item">
+                        <span class="importance-number">01</span>
+                        <span>Enhances employability and the ability to secure a job</span>
+                    </div>
+
+                    <div class="importance-item">
+                        <span class="importance-number">02</span>
+                        <span>Supports success in a productive workplace</span>
+                    </div>
+
+                    <div class="importance-item">
+                        <span class="importance-number">03</span>
+                        <span>Encourages effective teamwork and collaboration</span>
+                    </div>
+
+                    <div class="importance-item">
+                        <span class="importance-number">04</span>
+                        <span>Improves communication and problem-solving</span>
+                    </div>
+
+                    <div class="importance-item">
+                        <span class="importance-number">05</span>
+                        <span>Creates opportunities for career advancement</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- LESSON IMAGE -->
+
+            <article class="lesson01-image-card">
+
+                <div class="lesson01-image-area">
+
+                    <img
+                        src="../assets/images/pic1.png"
+                        alt="Professional skills lesson image"
+                    >
+
+                </div>
+
+            </article>
+
+
+            <!-- CLASSIFYING WORKPLACE SKILLS -->
+
+            <article class="lesson01-card blue types-card">
+
+                <div class="lesson01-card-header">
+
+                    <div class="lesson01-icon">
+                        ♧
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Classifying Workplace Skills
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <p class="types-intro">
+                    Workplace skills can be grouped into three main categories:
+                </p>
+
+                <div class="types-columns">
+
+                    <div class="type-box">
+
+                        <h3>
+                            Technical Skills
+                        </h3>
+
+                        <p>
+                            Specific expertise and knowledge required
+                            for a particular job or industry.
+                        </p>
+
+                        <strong>Examples:</strong>
+
+                        <p>
+                            Programming, data analysis and using
+                            industry-specific software.
+                        </p>
+
+                    </div>
+
+
+                    <div class="type-box">
+
+                        <h3>
+                            Soft Skills
+                        </h3>
+
+                        <p>
+                            Interpersonal and communication skills that
+                            improve work performance and collaboration.
+                        </p>
+
+                        <strong>Examples:</strong>
+
+                        <p>
+                            Communication, teamwork, leadership
+                            and time management.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TRANSFERABLE SKILLS -->
+
+            <article class="lesson01-card yellow skills-card">
+
+                <div class="lesson01-card-header">
+
+                    <div class="lesson01-icon">
+                        ▥
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Transferable Skills
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Versatile abilities that can be applied across different
+                    roles and industries:
+                </p>
+
+                <ul class="skills-list">
+
+                    <li>Problem-solving</li>
+                    <li>Adaptability</li>
+                    <li>Critical thinking</li>
+                    <li>Communication</li>
+                    <li>Teamwork</li>
+                    <li>Time management</li>
+                    <li>Leadership</li>
+                    <li>Flexibility across roles</li>
+
+                </ul>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- PAGE 2 -->
+
+    <section class="lesson01-sheet" id="part2">
+
+        <div class="page2-grid">
+
+            <!-- VALUES, BELIEFS, ATTITUDES AND CHARACTER -->
+
+            <article class="lesson01-card yellow examples-card">
+
+                <div class="lesson01-card-header">
+
+                    <div class="lesson01-icon">
+                        ▥
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Values, Beliefs, Attitudes & Character
+                        </h2>
+
+                        <p>
+                            These four elements influence our decisions,
+                            behaviour and professional identity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="example-list">
+
+                    <div class="example-item">
+
+                        <div class="example-icon">♧</div>
+
+                        <div>
+                            <strong>Values – What is important to you</strong>
+                            <span>
+                                Core principles that guide behaviour and
+                                decision-making, such as honesty and respect.
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="example-item">
+
+                        <div class="example-icon">▣</div>
+
+                        <div>
+                            <strong>Beliefs – What you think is true</strong>
+                            <span>
+                                Personal convictions that shape how you
+                                see yourself and the world.
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="example-item">
+
+                        <div class="example-icon">♙</div>
+
+                        <div>
+                            <strong>Attitudes – How you respond</strong>
+                            <span>
+                                Positive or negative ways of responding
+                                to people, situations and ideas.
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="example-item">
+
+                        <div class="example-icon">◇</div>
+
+                        <div>
+                            <strong>Character – The qualities you demonstrate</strong>
+                            <span>
+                                Moral and ethical qualities shown through
+                                consistent actions and behaviour.
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- JOHARI WINDOW -->
+
+            <article class="lesson01-card blue development-card">
+
+                <div class="lesson01-card-header">
+
+                    <div class="lesson01-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Johari Window
+                        </h2>
+
+                        <p>
+                            A model of self-awareness and interpersonal
+                            relationships developed by Joseph Luft and
+                            Harrington Ingham in 1955.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="development-list">
+
+                    <div class="development-item">
+                        <span class="development-number">01</span>
+                        <span>Open Area – Known to yourself and others</span>
+                    </div>
+
+                    <div class="development-item">
+                        <span class="development-number">02</span>
+                        <span>Blind Area – Known to others, unknown to yourself</span>
+                    </div>
+
+                    <div class="development-item">
+                        <span class="development-number">03</span>
+                        <span>Hidden Area – Known to yourself, unknown to others</span>
+                    </div>
+
+                    <div class="development-item">
+                        <span class="development-number">04</span>
+                        <span>Unknown Area – Not yet known to yourself or others</span>
+                    </div>
+
+                    <div class="development-item">
+                        <span class="development-number">05</span>
+                        <span>Feedback and open communication can increase self-awareness</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROFESSIONAL IDENTITY TREE -->
+
+            <article class="lesson01-card blue application-card">
+
+                <div class="lesson01-card-header">
+
+                    <div class="lesson01-icon">
+                        ◎
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            My johari window
+                        </h2>
+
+                       
+
+                    </div>
+
+                </div>
+
+               
+
+                <div class="application-image">
+
+                    <img
+                        src="../assets/images/l1.png"
+                        alt="Professional Identity Tree activity"
+                    >
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="lesson01-bottom">
+
+            <a href="lesson-02.html" class="lesson01-complete">
+                COMPLETE LESSON →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>
+        A BETTER ME, ALWAYS
+    </span>
+
+</footer>
+
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+</html>

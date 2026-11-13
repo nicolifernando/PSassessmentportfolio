@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Group Project | Ocean Crew</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+/* GROUP PROJECT PAGE */
+.project-page {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 55px 0 75px;
+}
+
+/* HEADING */
+.project-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+.project-heading .eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #567a9c;
+    margin-bottom: 15px;
+}
+.project-heading h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.1;
+    color: #4b3427;
+    margin-bottom: 15px;
+}
+.project-heading h1 span { color: #567a9c; }
+.project-heading p:last-child {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #756d65;
+}
+
+/* PROJECT INTRO */
+.project-intro {
+    background: #c9dfed;
+    padding: 32px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+.project-intro-top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 17px;
+}
+.project-icon {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border: 2px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+.project-intro small {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #567a9c;
+    font-weight: 700;
+}
+.project-intro h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    color: #4b3427;
+    margin-top: 5px;
+}
+.project-intro p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #514940;
+}
+
+/* PROJECT DETAILS */
+.project-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 25px;
+}
+.detail-card {
+    padding: 22px;
+    border-radius: 10px;
+    background: #f6e5aa;
+}
+.detail-card:nth-child(2) { background: #f4d9dc; }
+.detail-card:nth-child(3) { background: #eee8df; }
+.detail-card small {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #567a9c;
+}
+.detail-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 21px;
+    color: #4b3427;
+    margin: 10px 0 5px;
+}
+.detail-card p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #514940;
+}
+
+/* WHAT WE DID */
+.what-we-did {
+    background: #f4d9dc;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 45px;
+}
+.section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #567a9c;
+}
+.what-we-did h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #4b3427;
+    margin: 8px 0 15px;
+}
+.what-we-did p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: #514940;
+}
+
+/* ACTIVITIES */
+.project-activities { margin-bottom: 45px; }
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.section-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: #4b3427;
+    margin: 8px 0;
+}
+.section-heading p {
+    font-size: 12px;
+    color: #756d65;
+}
+.activities-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.activity-item {
+    background: #fffdf9;
+    border: 1px solid #e8dfd2;
+    padding: 18px;
+    border-radius: 9px;
+}
+.activity-item span {
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    color: #567a9c;
+}
+.activity-item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    color: #4b3427;
+    margin: 8px 0;
+}
+.activity-item p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #756d65;
+}
+
+/* PHOTO GALLERY */
+.project-gallery { margin-bottom: 50px; }
+.project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+}
+.project-photo {
+    background: #eee8df;
+    padding: 10px;
+    border-radius: 10px;
+}
+.project-photo-frame {
+    height: 260px;
+    border: 1px dashed #a99d8d;
+    border-radius: 7px;
+    background: #e4ddd1;
+    overflow: hidden;
+}
+.project-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.project-photo-caption {
+    text-align: center;
+    padding: 12px 5px 4px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #4b3427;
+}
+
+/* CERTIFICATE */
+.certificate-section { margin-bottom: 50px; }
+
+.certificate-card {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #f6e5aa;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-frame {
+    width: 210px;
+    height: 295px;
+    margin: 0 auto;
+    padding: 5px;
+    background: #fffdf9;
+    border: 1px dashed #a99d8d;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* VIDEO SECTION */
+.video-section {
+    background: #c9dfed;
+    padding: 32px;
+    border-radius: 12px;
+}
+.video-content {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    align-items: center;
+    gap: 30px;
+}
+.video-info h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #4b3427;
+    margin: 10px 0;
+}
+.video-info p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #514940;
+    margin-bottom: 18px;
+}
+.video-link {
+    display: inline-block;
+    padding: 13px 22px;
+    background: #4b3427;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+.video-link:hover { background: #567a9c; }
+
+/* QR CODE */
+.qr-area {
+    text-align: center;
+    background: rgba(255,255,255,.6);
+    padding: 18px;
+    border-radius: 10px;
+}
+.qr-area img {
+    width: 155px;
+    height: 155px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+.qr-area p {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-top: 12px;
+    color: #4b3427;
+}
+
+/* CLOSING */
+.project-closing {
+    text-align: center;
+    margin-top: 35px;
+    padding: 25px;
+    background: #f4d9dc;
+    border-radius: 10px;
+}
+.project-closing h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    color: #4b3427;
+    margin-bottom: 8px;
+}
+.project-closing p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #625a52;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .project-details { grid-template-columns: repeat(2, 1fr); }
+    .activities-list { grid-template-columns: repeat(2, 1fr); }
+    .project-gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .project-photo:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 9px);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-page {
+        width: 92%;
+        padding: 40px 0 55px;
+    }
+
+    .project-intro,
+    .what-we-did,
+    .video-section {
+        padding: 22px;
+    }
+
+    .project-details,
+    .activities-list,
+    .project-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-photo:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .project-photo-frame { height: 260px; }
+
+    .certificate-card { padding: 12px; }
+
+    .certificate-frame {
+        width: 180px;
+        height: 255px;
+    }
+
+    .video-content { grid-template-columns: 1fr; }
+
+    .qr-area {
+        width: 100%;
+        max-width: 230px;
+        margin: auto;
+    }
+
+    .section-heading h2 { font-size: 27px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame"><span>PS</span></div>
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT ME</a>
+        <a href="lessons.html">LESSONS</a>
+        <a href="activities.html">ACTIVITIES</a>
+        <a href="group-project.html" class="active">GROUP PROJECT</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="reflection.html">REFLECTION</a>
+    </nav>
+
+    <a href="contact.html" class="connect-button">
+        LET'S CONNECT <span>→</span>
+    </a>
+</header>
+
+<main class="project-page">
+
+    <!-- PAGE HEADING -->
+    <section class="project-heading">
+        <p class="eyebrow">PROFESSIONAL SKILLS • GROUP PROJECT</p>
+        <h1>Ocean <span>Crew</span></h1>
+        <p>Turtle Conservation & Community Service Project</p>
+    </section>
+
+    <!-- PROJECT INTRODUCTION -->
+    <section class="project-intro">
+        <div class="project-intro-top">
+           
+            <div>
+                <small>OUR GROUP PROJECT</small>
+                <h2>Turtle Conservation & Community Service</h2>
+            </div>
+        </div>
+
+        <p>
+            As part of the Professional Skills module, our group,
+            Ocean Crew, participated in a community service project
+            at a turtle sanctuary. The project gave us an opportunity
+            to contribute to turtle care and sanctuary maintenance
+            while gaining practical experience in teamwork,
+            communication and environmental responsibility.
+        </p>
+    </section>
+
+    <!-- PROJECT DETAILS -->
+    <section class="project-details">
+        <article class="detail-card">
+            <small>GROUP NAME</small>
+            <h3>Ocean Crew</h3>
+            <p>A team of students working together towards turtle conservation and community service.</p>
+        </article>
+
+        <article class="detail-card">
+            <small>PROJECT TYPE</small>
+            <h3>Life Below Water</h3>
+            <p>Turtle care, sanctuary maintenance and environmental awareness.</p>
+        </article>
+
+        <article class="detail-card">
+            <small>LOCATION</small>
+            <h3>Turtle Sanctuary</h3>
+            <p>Sea Turtle Sanctuary - Mount Lavinia</p>
+        </article>
+    </section>
+
+    <!-- WHAT WE DID -->
+    <section class="what-we-did">
+        <span class="section-label">OUR EXPERIENCE</span>
+        <h2>What We Did</h2>
+        <p>
+            During our visit to the turtle sanctuary, we participated
+            in several activities that supported the care and wellbeing
+            of turtles. We helped clean and maintain the sanctuary,
+            assisted with cleaning the turtles, and fed them under the
+            guidance of the sanctuary staff. We also observed and
+            assisted with applying necessary medication under
+            appropriate guidance. Throughout the visit, we learned
+            more about turtles, their behaviour, their needs and the
+            importance of marine conservation. Working together as
+            Ocean Crew allowed us to strengthen our teamwork,
+            communication and sense of social responsibility while
+            contributing our time and effort to a meaningful cause.
+        </p>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="project-activities">
+        <div class="section-heading">
+            <span class="section-label">OUR CONTRIBUTION</span>
+            <h2>Activities We Participated In</h2>
+            <p>A closer look at our contribution to the project.</p>
+        </div>
+
+        <div class="activities-list">
+            <article class="activity-item">
+                <span>01</span>
+                <h3>Sanctuary Cleaning</h3>
+                <p>Cleaning and maintaining areas within the sanctuary.</p>
+            </article>
+
+            <article class="activity-item">
+                <span>02</span>
+                <h3>Turtle Cleaning</h3>
+                <p>Assisting with cleaning and caring for the turtles.</p>
+            </article>
+
+            <article class="activity-item">
+                <span>03</span>
+                <h3>Feeding Turtles</h3>
+                <p>Feeding turtles under the guidance of sanctuary staff.</p>
+            </article>
+
+            <article class="activity-item">
+                <span>04</span>
+                <h3>Applying Medication</h3>
+                <p>Assisting with necessary medication under appropriate guidance.</p>
+            </article>
+
+            <article class="activity-item">
+                <span>05</span>
+                <h3>Learning About Turtles</h3>
+                <p>Understanding turtle care, behaviour and conservation.</p>
+            </article>
+
+            <article class="activity-item">
+                <span>06</span>
+                <h3>Environmental Awareness</h3>
+                <p>Learning about protecting marine animals and their environment.</p>
+            </article>
+
+            <article class="activity-item">
+                <span>07</span>
+                <h3>Teamwork</h3>
+                <p>Working together to complete the project activities.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- FIVE PROJECT PHOTOS -->
+    <section class="project-gallery">
+        <div class="section-heading">
+            <span class="section-label">OUR MEMORIES</span>
+            <h2>Project Highlights</h2>
+            <p>Five moments that capture our Ocean Crew experience.</p>
+        </div>
+
+        <div class="project-gallery-grid">
+            <div class="project-photo">
+                <div class="project-photo-frame">
+                    <img src="assets/images/g1.png" alt="Ocean Crew project photograph 1">
+                </div>
+                <p class="project-photo-caption">MY WORK</p>
+            </div>
+
+            <div class="project-photo">
+                <div class="project-photo-frame">
+                    <img src="assets/images/g3.jpeg" alt="Ocean Crew project photograph 2">
+                </div>
+                <p class="project-photo-caption">TURTLE CARE</p>
+            </div>
+
+            <div class="project-photo">
+                <div class="project-photo-frame">
+                    <img src="assets/images/g2.jpeg" alt="Ocean Crew project photograph 3">
+                </div>
+                <p class="project-photo-caption">OUR ACTIVITIES</p>
+            </div>
+
+            <div class="project-photo">
+                <div class="project-photo-frame">
+                    <img src="assets/images/g4.jpeg" alt="Ocean Crew project photograph 4">
+                </div>
+                <p class="project-photo-caption">TEAMWORK</p>
+            </div>
+
+            <div class="project-photo">
+                <div class="project-photo-frame">
+                    <img src="assets/images/g6.jpeg" alt="Ocean Crew project photograph 5">
+                </div>
+                <p class="project-photo-caption">Turtles</p>
+            </div>
+            <div class="project-photo">
+                <div class="project-photo-frame">
+                    <img src="assets/images/g5.jpeg" alt="Ocean Crew project photograph 5">
+                </div>
+                <p class="project-photo-caption">MEMORABLE MOMENTS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATE -->
+    <section class="certificate-section">
+        <div class="section-heading">
+            <span class="section-label">PROJECT RECOGNITION</span>
+            <h2>My Certificate</h2>
+            <p>Certificate received for participating in the project.</p>
+        </div>
+
+        <div class="certificate-card">
+            <div class="certificate-frame">
+                <img src="assets/images/cer.jpeg" alt="Ocean Crew project certificate">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECT VIDEO -->
+    <section class="video-section">
+        <div class="video-content">
+            <div class="video-info">
+                <span class="section-label">WATCH OUR JOURNEY</span>
+                <h2>Ocean Crew in Action</h2>
+                <p>
+                    Take a glimpse into our journey with Ocean Crew.
+                    Watch our project video to see the activities,
+                    experiences and memories from our turtle
+                    conservation and community service project.
+                </p>
+
+                <a
+                    href="https://drive.google.com/file/d/1T2QgYD90kR0_gdiiLhMDJ2GN8Yhqidhc/view?usp=drivesdk"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="video-link">
+                    WATCH PROJECT VIDEO →
+                </a>
+            </div>
+
+            <div class="qr-area">
+                <img src="assets/images/qr.jpeg" alt="QR code to watch the Ocean Crew project video">
+                <p>SCAN TO WATCH</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="project-closing">
+        <h2>Small Actions. Meaningful Impact.</h2>
+        <p>
+            This project reminded us that even small contributions
+            of time and effort can make a difference. It was an
+            opportunity to learn, work together and develop a
+            greater appreciation for protecting marine life.
+        </p>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+    <div class="footer-line"></div>
+    <span>A BETTER ME, ALWAYS</span>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

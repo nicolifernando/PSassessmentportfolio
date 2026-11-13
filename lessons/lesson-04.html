@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lesson 04 | CV Essentials</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+
+    <style>
+
+        /* =====================================================
+           LESSON 04
+        ===================================================== */
+
+        .lesson04-page {
+            width: 94%;
+            max-width: 1450px;
+            margin: 0 auto;
+            padding: 22px 0 35px;
+        }
+
+        .lesson04-sheet {
+            background: #fffdf9;
+            padding: 8px 10px 25px;
+            margin-bottom: 30px;
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .lesson04-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .lesson04-back {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .lesson04-back-icon {
+            width: 28px;
+            height: 28px;
+            border: 1px solid #201a17;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+        }
+
+        .lesson04-page-number {
+            border-left: 1px solid #aaa;
+            padding-left: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .page-dot {
+            width: 11px;
+            height: 11px;
+            border: 1px solid #8b8b8b;
+            border-radius: 50%;
+        }
+
+        .page-dot.active {
+            background: #567a9c;
+            border-color: #567a9c;
+        }
+
+
+        /* =====================================================
+           HEADING
+        ===================================================== */
+
+        .lesson04-heading {
+            display: grid;
+            grid-template-columns: 1fr 95px;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 18px;
+        }
+
+        .lesson04-label {
+            font-size: 11px;
+            letter-spacing: 6px;
+            margin: 0 0 2px;
+        }
+
+        .lesson04-heading h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(52px, 5.5vw, 78px);
+            line-height: .92;
+            letter-spacing: -3px;
+            margin: 0;
+        }
+
+        .lesson04-heading h1 span {
+            color: #567a9c;
+        }
+
+        .lesson04-subtitle {
+            margin: 11px 0 0;
+            font-size: 11px;
+            letter-spacing: 6px;
+        }
+
+        .lesson04-number {
+            width: 92px;
+            height: 92px;
+            border-radius: 50%;
+            background: #f6e5aa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lesson04-number strong {
+            font-family: "Playfair Display", serif;
+            font-size: 35px;
+            line-height: 1;
+        }
+
+        .lesson04-number span {
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           GENERAL CARDS
+        ===================================================== */
+
+        .lesson04-card {
+            border-radius: 9px;
+            padding: 17px;
+        }
+
+        .lesson04-card.yellow {
+            background: #f6e5aa;
+        }
+
+        .lesson04-card.blue {
+            background: #c9dfed;
+        }
+
+        .lesson04-card.pink {
+            background: #f4d9dc;
+        }
+
+        .lesson04-card.cream {
+            background: #eee8df;
+        }
+
+        .lesson04-card.lilac {
+            background: #e7def8;
+        }
+
+        .lesson04-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .lesson04-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border: 3px solid rgba(255,255,255,.82);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .lesson04-card h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 22px;
+            line-height: 1.12;
+            margin: 3px 0 5px;
+        }
+
+        .lesson04-card p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           PAGE 1
+        ===================================================== */
+
+        .lesson04-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 420px;
+            grid-template-rows: auto auto auto;
+            gap: 10px;
+        }
+
+
+        /* WHAT IS A CV */
+
+        .cv-definition {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+
+        /* WHY CV */
+
+        .cv-importance {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .cv-bullets {
+            margin: 5px 0 0;
+            padding-left: 18px;
+        }
+
+        .cv-bullets li {
+            font-size: 11.5px;
+            line-height: 1.45;
+            margin-bottom: 2px;
+        }
+
+
+        /* PAGE 1 IMAGE */
+
+        .lesson04-image-card {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    justify-self: center;
+    align-self: start;
+    background: #f1efeb;
+    padding: 10px;
+    border-radius: 9px;
+    box-sizing: border-box;
+}
+
+.lesson04-image-area {
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson04-image-area img {
+    display: block;
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+        /* KEY SECTIONS */
+
+        .cv-sections {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .section-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 7px;
+        }
+
+        .section-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: rgba(255,255,255,.56);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .section-number {
+            width: 26px;
+            height: 26px;
+            min-width: 26px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.72);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Playfair Display", serif;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .section-item span:last-child {
+            font-size: 10.5px;
+        }
+
+
+        /* QUALITIES */
+
+        .cv-qualities {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .quality-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 7px;
+        }
+
+        .quality-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: rgba(255,255,255,.56);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .quality-check {
+            width: 23px;
+            height: 23px;
+            min-width: 23px;
+            border-radius: 50%;
+            background: #f0d98e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .quality-item span:last-child {
+            font-size: 10.5px;
+        }
+
+
+        /* TYPES OF CV */
+
+        .cv-types {
+            grid-column: 1 / 3;
+            grid-row: 3;
+        }
+
+        .types-intro {
+            margin: 2px 0 9px 62px !important;
+        }
+
+        .cv-type-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 7px;
+        }
+
+        .cv-type {
+            background: rgba(255,255,255,.6);
+            border-radius: 7px;
+            padding: 10px;
+            min-height: 78px;
+        }
+
+        .cv-type h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 13px;
+            margin: 0 0 4px;
+        }
+
+        .cv-type p {
+            font-size: 10px;
+            line-height: 1.4;
+        }
+
+
+        /* =====================================================
+           PAGE 2
+        ===================================================== */
+
+        .lesson04-page2-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .95fr 420px;
+            grid-template-rows: auto auto;
+            gap: 10px;
+        }
+
+
+        /* COMMON MISTAKES */
+
+        .cv-mistakes {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .mistake-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .mistake-item {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: rgba(255,255,255,.55);
+            border-radius: 5px;
+            padding: 6px 7px;
+        }
+
+        .mistake-icon {
+            width: 23px;
+            height: 23px;
+            min-width: 23px;
+            border-radius: 50%;
+            background: #f1c3c3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .mistake-item span:last-child {
+            font-size: 10.8px;
+            line-height: 1.35;
+        }
+
+
+        /* SAMPLE CV */
+
+        .sample-cv {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .sample-cv-area {
+            height: 100px;
+            border: 1px dashed #888;
+            border-radius: 8px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .sample-cv-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* TAILORING */
+
+        .cv-tailoring {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .tailor-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .tailor-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,.55);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .tailor-check {
+            width: 23px;
+            height: 23px;
+            min-width: 23px;
+            border-radius: 50%;
+            background: #8ba9c0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .tailor-item span:last-child {
+            font-size: 10.7px;
+        }
+
+
+        /* FINAL CHECKLIST */
+
+        .cv-checklist {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .check-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-top: 9px;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,.55);
+            border-radius: 5px;
+            padding: 5px 7px;
+        }
+
+        .check-icon {
+            width: 23px;
+            height: 23px;
+            min-width: 23px;
+            border-radius: 50%;
+            background: #f0d98e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .check-item span:last-child {
+            font-size: 10.7px;
+        }
+
+
+        /* =====================================================
+           RIGHT SIDE
+        ===================================================== */
+
+        /* RIGHT SIDE COLUMN */
+
+.lesson04-side {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+    align-self: start;
+}
+
+/* SIDE CARDS */
+
+.side-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border-radius: 9px;
+    margin-top: 0;
+    height: auto;
+}
+
+/* SIDE CARD HEADER */
+
+.side-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.side-card h2 {
+    font-size: 20px;
+}
+
+.personal-label {
+    font-size: 8px !important;
+    letter-spacing: 3px;
+    margin-top: 2px !important;
+}
+
+/* CV IMAGE FRAME */
+
+.user-image-area {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    border: 1px dashed #999;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-image-area img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+.side-card{
+    grid-row: 1 / 3;
+    align-self: start;
+    margin-top: -250px;
+}
+        /* =====================================================
+           PAGE 2 BOTTOM
+        ===================================================== */
+
+        .lesson04-bottom {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .lesson04-outline {
+            border: 1px solid #4b2e20;
+            color: #4b2e20;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .lesson04-complete {
+            background: #4b2e20;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1150px) {
+
+            .lesson04-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .lesson04-image-card {
+                grid-column: 1 / 3;
+                grid-row: auto;
+            }
+
+            .lesson04-image-area,
+            .lesson04-image-area img {
+                min-height: 400px;
+            }
+
+            .lesson04-page2-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .lesson04-side {
+                grid-column: 1 / 3;
+                grid-row: auto;
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 760px) {
+
+            .lesson04-page {
+                width: 92%;
+            }
+
+            .lesson04-heading {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson04-number {
+                display: none;
+            }
+
+            .lesson04-heading h1 {
+                font-size: 48px;
+            }
+
+            .lesson04-grid,
+            .lesson04-page2-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cv-definition,
+            .cv-importance,
+            .lesson04-image-card,
+            .cv-sections,
+            .cv-qualities,
+            .cv-types,
+            .cv-mistakes,
+            .sample-cv,
+            .cv-tailoring,
+            .cv-checklist {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .lesson04-side {
+                grid-column: auto;
+                grid-template-columns: 1fr;
+            }
+
+            .cv-type-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .lesson04-page-number {
+                display: none;
+            }
+
+            .lesson04-bottom {
+                justify-content: center;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .lesson04-heading h1 {
+                font-size: 40px;
+                letter-spacing: -2px;
+            }
+
+            .lesson04-card {
+                padding: 15px;
+            }
+
+            .lesson04-card h2 {
+                font-size: 20px;
+            }
+
+            .lesson04-subtitle {
+                letter-spacing: 3px;
+            }
+
+            .cv-type-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lesson04-bottom {
+                flex-direction: column;
+            }
+
+            .lesson04-outline,
+            .lesson04-complete {
+                text-align: center;
+            }
+            /* MOVE MY APPLICATION CARD UP */
+
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     SAME NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="index.html" class="nav-logo">
+        <div class="logo-frame">
+            <span>PS</span>
+        </div>
+
+        <div class="logo-text">
+            <strong>Professional</strong>
+            <span>Skills Portfolio</span>
+        </div>
+    </a>
+
+  <nav class="nav-links">
+    <a href="../index.html">HOME</a>
+    <a href="../about.html">ABOUT ME</a>
+    <a href="../lessons.html"class="active">LESSONS</a>
+    <a href="../activities.html" >ACTIVITIES</a>
+    <a href="../group-project.html">GROUP PROJECT</a>
+    <a href="../skills.html">SKILLS</a>
+    <a href="../reflection.html">REFLECTION</a>
+</nav>
+
+
+    <a href="../index.html#connect" class="connect-button">
+        LET'S CONNECT
+        <span>→</span>
+    </a>
+
+</header>
+
+
+
+<main class="lesson04-page">
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<section class="lesson04-sheet" id="part1">
+
+
+    <div class="lesson04-top">
+
+        <a href="../lessons.html" class="lesson04-back">
+
+            <span class="lesson04-back-icon">
+                ←
+            </span>
+
+            BACK TO LESSONS
+
+        </a>
+
+
+        <div class="lesson04-page-number">
+
+           
+
+        </div>
+
+    </div>
+
+
+
+    <!-- HEADING -->
+
+    <div class="lesson04-heading">
+
+        <div>
+
+            <p class="lesson04-label">
+                LESSON 04
+            </p>
+
+            <h1>
+                CV <span>Essentials</span>
+            </h1>
+
+            <p class="lesson04-subtitle">
+                PREPARE &nbsp; • &nbsp; PRESENT &nbsp; • &nbsp; PROGRESS
+            </p>
+
+        </div>
+
+
+        <div class="lesson04-number">
+
+            <strong>
+                04
+            </strong>
+
+            <span>
+                LESSON
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="lesson04-grid">
+
+
+        <!-- WHAT IS A CV -->
+
+        <article class="lesson04-card yellow cv-definition">
+
+            <div class="lesson04-card-header">
+
+                <div class="lesson04-icon">
+                    ♧
+                </div>
+
+                <div>
+
+                    <h2>
+                        What is a CV?
+                    </h2>
+
+                    <p>
+                        A CV (Curriculum Vitae) is a formal document
+                        that summarises your education, skills,
+                        experience and achievements. It gives potential
+                        employers an overview of who you are, what you
+                        can do and why you are a good fit for a role.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- WHY CV -->
+
+        <article class="lesson04-card pink cv-importance">
+
+            <div class="lesson04-card-header">
+
+                <div class="lesson04-icon">
+                    ◎
+                </div>
+
+                <div>
+
+                    <h2>
+                        Why is a CV Important?
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <ul class="cv-bullets">
+
+                <li>
+                    Creates a strong first impression
+                </li>
+
+                <li>
+                    Helps you stand out from other applicants
+                </li>
+
+                <li>
+                    Showcases your skills and achievements
+                </li>
+
+                <li>
+                    Opens doors to interviews and opportunities
+                </li>
+
+                <li>
+                    Reflects your professionalism and attention to detail
+                </li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- CV IMAGE -->
+
+        <article class="lesson04-image-card">
+
+            <div class="lesson04-image-area">
+
+                <img
+                    src="../assets/images/samcv.jpeg"
+                    alt="Sample CV structure"
+                >
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KEY SECTIONS -->
+
+        <article class="lesson04-card blue cv-sections">
+
+            <div class="lesson04-card-header">
+
+                <div class="lesson04-icon">
+                    ▤
+                </div>
+
+                <div>
+
+                    <h2>
+                        Key Sections of a CV
+                    </h2>
+
+                    <p>
+                        A well-structured CV usually includes:
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="section-list">
+
+
+                <div class="section-item">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <span>
+                        Personal Information
+                        (name, contact details, LinkedIn)
+                    </span>
+
+                </div>
+
+
+                <div class="section-item">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <span>
+                        Professional Summary / Objective
+                    </span>
+
+                </div>
+
+
+                <div class="section-item">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <span>
+                        Education
+                    </span>
+
+                </div>
+
+
+                <div class="section-item">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <span>
+                        Work Experience
+                        (internships, part-time, projects)
+                    </span>
+
+                </div>
+
+
+                <div class="section-item">
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <span>
+                        Skills (technical and soft skills)
+                    </span>
+
+                </div>
+
+
+                <div class="section-item">
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+                    <span>
+                        Achievements & Certifications
+                    </span>
+
+                </div>
+
+
+                <div class="section-item">
+
+                    <span class="section-number">
+                        07
+                    </span>
+
+                    <span>
+                        Additional Sections
+                        (volunteering, extracurricular, etc.)
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- QUALITIES -->
+
+        <article class="lesson04-card yellow cv-qualities">
+
+            <div class="lesson04-card-header">
+
+                <div class="lesson04-icon">
+                    ◇
+                </div>
+
+                <div>
+
+                    <h2>
+                        Qualities of a Good CV
+                    </h2>
+
+                    <p>
+                        An effective CV should be:
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quality-list">
+
+
+                <div class="quality-item">
+
+                    <span class="quality-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Clear and well-organised
+                    </span>
+
+                </div>
+
+
+                <div class="quality-item">
+
+                    <span class="quality-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Concise and relevant
+                    </span>
+
+                </div>
+
+
+                <div class="quality-item">
+
+                    <span class="quality-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Tailored to the job role
+                    </span>
+
+                </div>
+
+
+                <div class="quality-item">
+
+                    <span class="quality-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Error-free (grammar and spelling)
+                    </span>
+
+                </div>
+
+
+                <div class="quality-item">
+
+                    <span class="quality-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Visually clean and professional
+                    </span>
+
+                </div>
+
+
+                <div class="quality-item">
+
+                    <span class="quality-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Highlights your strengths and achievements
+                    </span>
+
+                </div>
+
+
+                <div class="quality-item">
+
+                    <span class="quality-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Updated regularly
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+        <!-- TYPES OF CV -->
+
+        <article class="lesson04-card cream cv-types">
+
+            <div class="lesson04-card-header">
+
+                <div class="lesson04-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h2>
+                        Types of CVs
+                    </h2>
+
+                    <p>
+                        The type of CV you use may depend on your
+                        experience and the role you are applying for.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cv-type-grid">
+
+
+                <div class="cv-type">
+
+                    <h3>
+                        Chronological CV
+                    </h3>
+
+                    <p>
+                        Focuses on work history
+                        (in most recent order).
+                    </p>
+
+                </div>
+
+
+                <div class="cv-type">
+
+                    <h3>
+                        Functional CV
+                    </h3>
+
+                    <p>
+                        Focuses on skills
+                        and abilities.
+                    </p>
+
+                </div>
+
+
+                <div class="cv-type">
+
+                    <h3>
+                        Combination CV
+                    </h3>
+
+                    <p>
+                        A mix of skills and
+                        work experience.
+                    </p>
+
+                </div>
+
+
+                <div class="cv-type">
+
+                    <h3>
+                        Academic CV
+                    </h3>
+
+                    <p>
+                        Used for academic
+                        and research roles.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2
+===================================================== -->
+
+<section class="lesson04-sheet" id="part2">
+
+
+  
+
+        
+
+     
+
+
+    <div class="lesson04-page2-grid">
+
+
+        <!-- COMMON MISTAKES -->
+
+        <article class="lesson04-card pink cv-mistakes">
+
+            <div class="lesson04-card-header">
+
+                <div class="lesson04-icon">
+                    !
+                </div>
+
+                <div>
+
+                    <h2>
+                        Common Mistakes to Avoid
+                    </h2>
+
+                    <p class="personal-label">
+                        STEER CLEAR FOR A STRONGER CV
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="mistake-list">
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Spelling and grammatical errors
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Including irrelevant or outdated information
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Using an unprofessional email address
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Writing long, unclear paragraphs
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Not quantifying achievements
+                        (e.g. "Managed a team" instead of
+                        "Managed a team and increased sales by 20%")
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Using the same CV for every application
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Poor formatting or cluttered design
+                    </span>
+
+                </div>
+
+
+                <div class="mistake-item">
+
+                    <span class="mistake-icon">
+                        ×
+                    </span>
+
+                    <span>
+                        Exaggerating or providing false information
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+
+
+
+        <!-- TAILORING -->
+
+        <article class="lesson04-card blue cv-tailoring">
+
+            <div class="lesson04-card-header">
+
+                <div class="lesson04-icon">
+                    ⚙
+                </div>
+
+                <div>
+
+                    <h2>
+                        Tips for Tailoring Your CV
+                    </h2>
+
+                    <p class="personal-label">
+                        MAKE IT RELEVANT AND IMPACTFUL
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="tailor-list">
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Read the job description carefully
+                    </span>
+
+                </div>
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Highlight relevant skills and experiences
+                    </span>
+
+                </div>
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Use keywords from the job posting
+                    </span>
+
+                </div>
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Adjust your professional summary/objective
+                    </span>
+
+                </div>
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Showcase achievements that match the role
+                    </span>
+
+                </div>
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Keep the format clean and consistent
+                    </span>
+
+                </div>
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Remove irrelevant information
+                    </span>
+
+                </div>
+
+
+                <div class="tailor-item">
+
+                    <span class="tailor-check">
+                        ✓
+                    </span>
+
+                    <span>
+                        Tailor your CV for each application
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+
+       
+
+        <!-- RIGHT SIDE -->
+
+        <div class="lesson04-side">
+
+
+         
+
+            <!-- MY APPLICATION -->
+
+            <article class="lesson04-card yellow side-card">
+
+                <div class="side-card-header">
+
+                    <div class="lesson04-icon">
+                        ▱
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            My Application
+                        </h2>
+
+                        <p class="personal-label">
+                            HOW I'LL APPLY THIS IN MY LIFE
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="user-image-area">
+
+                    <img
+                        src="../assets/images/mycv.jpeg"
+                        alt="My CV application"
+                    >
+
+                </div>
+
+            </article>
+
+
+
+            
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- BOTTOM BUTTONS -->
+
+    <div class="lesson04-bottom">
+
+        <a href="lesson-03.html" class="lesson04-outline">
+            ← PREVIOUS
+        </a>
+
+
+        <a href="lesson-05.html" class="lesson04-complete">
+            COMPLETE LESSON →
+        </a>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <span>
+        DISCIPLINED &nbsp; • &nbsp;
+        CURIOUS &nbsp; • &nbsp;
+        PURPOSEFUL
+    </span>
+
+    <div class="footer-line"></div>
+
+    <span>
+        A BETTER ME, ALWAYS
+    </span>
+
+</footer>
+
+
+<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
